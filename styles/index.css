@@ -171,3 +171,16 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
+.Slideshow {
+  max-width: 600px;
+  position: relative;
+  margin: auto;
+  overflow: hidden;
+}
+
+.Slides {
+  display: none;
+  width: 100%;
+  animation: fade 8s infinite;
+}
