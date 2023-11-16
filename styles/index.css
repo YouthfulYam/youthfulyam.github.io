@@ -184,6 +184,12 @@ footer {
   width: 100%;
 }
 
+#slide1:checked ~ .Slides:nth-child(2),
+#slide2:checked ~ .Slides:nth-child(4),
+#slide3:checked ~ .Slides:nth-child(6) {
+  display: block;
+}
+
 .prev, .next {
   position: absolute;
   top: 50%;
@@ -196,16 +202,15 @@ footer {
   border: none;
 }
 
-#slide1:checked ~ .Slides:nth-child(1),
-#slide2:checked ~ .Slides:nth-child(2),
-#slide3:checked ~ .Slides:nth-child(3) {
-  display: block;
-}
-
 .prev {
   left: 0;
 }
 
 .next {
   right: 0;
+}
+
+.Slides a img {
+  width: 100%;
+  height: auto;
 }
