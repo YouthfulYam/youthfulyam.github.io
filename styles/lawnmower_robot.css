@@ -98,10 +98,15 @@ nav a {
 main {
     background-color: #fff;
     padding: 20px;
-    max-width: 800px;
+    max-width: 100%;
     margin: 20px auto;
     padding: 20px;
 }
+.LUBA{
+    width: 30%;
+    float: left;
+}
+
 
 section {
     margin-bottom: 20px;
