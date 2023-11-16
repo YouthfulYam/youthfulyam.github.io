@@ -173,7 +173,7 @@ footer {
 }
 
 .Slideshow {
-  max-width: 600px;
+  max-width: 75%;
   position: relative;
   margin: auto;
   overflow: hidden;
@@ -182,22 +182,30 @@ footer {
 .Slides {
   display: none;
   width: 100%;
-  animation: fade 8s infinite;
 }
 
-@keyframes fade {
-  0%, 25% {
-    opacity: 1;
-  }
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 16px;
+  border: none;
+}
 
-  25%, 50% {
-    opacity: 0;
-  }
+#slide1:checked ~ .Slides:nth-child(1),
+#slide2:checked ~ .Slides:nth-child(2),
+#slide3:checked ~ .Slides:nth-child(3) {
+  display: block;
+}
 
-  50%, 75% {
-    opacity: 0;
-  }
-  75%, 100% {
-    opacity: 1;
-  }
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
 }
