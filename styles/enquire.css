@@ -10,7 +10,10 @@ body {
     font-weight: 400;
     font-style: normal;
     color:rgb(60,60,80);
-    background: url("../images/demo_background.png")no-repeat;
+    /*background: url("../images/demo_background.png")no-repeat;*/
+    background: url("../images/vector_graphic_tmp.jpg")no-repeat;
+    background-size: cover;
+    background-position: center;
 
 
 }
@@ -53,13 +56,13 @@ fieldset legend{
 }
 
 #firstName {
-  width:30%;
+  width:28%;
   margin-right:7%;
   
 }
 
 #lastName {
-  width:30%;
+  width:28%;
 }
 
 #postcode {
@@ -80,6 +83,7 @@ fieldset legend{
   margin-left:1%;
   font-size: 12px;
   padding:1px 10px 0px 10px;
+  margin-bottom: 7px;
 }
 
 #state {
