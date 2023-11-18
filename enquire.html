@@ -83,17 +83,23 @@
                         <label><input type="radio" name="preferredContact" value="mobile"> Mobile</label>
                         <label><input type="radio" name="preferredContact" value="sms"> SMS</label>
                     </fieldset>
+
+                    <fieldset>
+                        <legend> Producet Name</legend>
+                        <label for="product">Product:<span class="asterisk">&#42;</span></label>
+                        <select id="product" name="product" required>
+                            <option value="autonomousVacuumCleaner">tmpName Roomba</option>
+                            <option value="autonomousPoolCleaner">tmpName Pool Cleaner</option>
+                            <option value="autonomousLawnmower">tmpName Lawnmower</option>
+                            <option value="tableServiceRobot">tmpName Table Service Robot</option>
+                        </select>
+                    </fieldset>
                     
-                    <label for="product">Product:<span class="asterisk">&#42;</span></label>
-                    <select id="product" name="product" required>
-                        <option value="autonomousVacuumCleaner">tmpName Roomba</option>
-                        <option value="autonomousPoolCleaner">tmpName Pool Cleaner</option>
-                        <option value="autonomousLawnmower">tmpName Lawnmower</option>
-                        <option value="tableServiceRobot">tmpName Table Service Robot</option>
-                    </select>
-                    
-                    <p><label for="comments">Comments:<span class="asterisk">&#42;</span></label></p>
-                    <p><textarea id="comments" name="comments" placeholder="Please describe what you want to find out" required></textarea></p>
+                    <fieldset>
+                        <legend> Product Enquiry</legend>
+                        <p><label for="comments">Comments:<span class="asterisk">&#42;</span></label></p>
+                        <p><textarea id="comments" name="comments" placeholder="Please describe what you want to find out" required></textarea></p>
+                    </fieldset>
                     
                     <p><button type="submit">Submit</button></p>     
     </form>   
