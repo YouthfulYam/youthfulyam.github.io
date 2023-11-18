@@ -46,7 +46,7 @@ fieldset legend{
   align-items:center;
   min-height:100vh;
   background: transparent;
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.4);/**/
   border: 2px solid #14213d;
   box-shadow: 0 0 10px rgba(0,0,0,.4);
   backdrop-filter: blur(20px);
@@ -55,6 +55,11 @@ fieldset legend{
   border-radius: 20px;
   
 }
+
+.form_wrapper fieldset {
+    border-radius: 15px;
+    margin-bottom: 10px;
+  }
 
 #firstName {
   width:28%;
