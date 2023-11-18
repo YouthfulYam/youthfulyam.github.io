@@ -1,4 +1,20 @@
 .asterisk{
     color:red;
-    font-size: 3em;
+    font-size: 0.9em;
+}
+
+font-family: "amandine", sans-serif;
+font-weight: 400;
+font-style: normal;
+
+title {
+    font-family: "amandine", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+section h1{
+    font-family: "amandine", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
