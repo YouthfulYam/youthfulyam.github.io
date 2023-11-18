@@ -11,7 +11,7 @@ body {
     font-style: normal;
     color:rgb(60,60,80);
     /*background: url("../images/demo_background.png")no-repeat;*/
-    background: url("../images/vector_graphic_tmp.jpg")no-repeat;
+    background: url("../images/vector_graphic_tmp.jpg") no-repeat;
     background-size: cover;
     background-position: center;
 
@@ -46,6 +46,7 @@ fieldset legend{
   align-items:center;
   min-height:100vh;
   background: transparent;
+  background: rgba(255, 255, 255, 0.8);
   border: 2px solid #14213d;
   box-shadow: 0 0 10px rgba(0,0,0,.4);
   backdrop-filter: blur(20px);
