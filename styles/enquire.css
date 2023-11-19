@@ -1,62 +1,71 @@
-/*
-* {
-    transform: translateX(7.5px);
-}
-*/
 
 body {
+    /* General Font */
     font-family: "adobe-garamond-pro", serif;
     font-weight: 400;
     font-style: normal;
     color:rgb(60,60,80);
     background-color:#fff3EB;
-
+  
     /*background: url("../images/demo_background.png")no-repeat;*/
     /*background: url("../images/vector_graphic_tmp.jpg") no-repeat;*/
 
 }
 
 section h1 {
+    /* Title Font */
     font-family: "amandine", sans-serif;
     font-weight: 700;
     font-style: normal;
     font-size: 3em;
 }
+
 section{
     margin-bottom: 100px;
     margin-top: 100px;
     display: flex;
-    justify-content: center;
+    justify-content: center; 
     align-items: center;
+    background-color: #FFFDFB;
+    /* Generally sticking to a border radius of 20px */
+    border-radius:20px;
 }
 
 section .intro-paragraph{
-    margin-left: 200px;
-    height: 150px; 
-    width: 400px; /* Adjust the width as needed */
+    /* Aligning paragraph to the right of the heading */
+    display:flex;
+    align-items:center;
+    justify-content: center;
     resize: vertical;
     text-align: center;
+    width: 400px;
+    margin-left: 200px;
+    height: 400px; 
+
 }
 
 
 .form-section{
-    /*    
-    background: url("https://i.imgur.com/YwMvKWD.jpeg") no-repeat;
+  /*    
+  background: url("https://i.imgur.com/YwMvKWD.jpeg") no-repeat;
     background-size: cover;
     background-position: center;
-    */
-    background-color:#fff3EB;
+  */
     background: url("https://i.imgur.com/vwqUyIL.png") no-repeat;
+    
+    flex: 1;
     background-position: right;
+    background-size: 100% 100%;
     background-size: contain;
     position: relative;
-    flex: 1;
-    padding: 20px; /* Add padding to the right section */
     background-size: cover;
     background-position: center;
-    border-radius: 20px;
-    margin-right: 40px;
+    
     transform: translateX(10px);
+    border-radius: 20px;
+    padding: 100px;
+    margin-right: 40px;
+    background-color:#fff3EB;
 }
 
 
@@ -66,54 +75,33 @@ section .intro-paragraph{
 }
 
 
-
-
-
-
 fieldset legend{
+    /* Sub heading */
     font-family: "amandine", sans-serif;
     font-weight: 400;
     font-style: normal;
     font-size: 2.25em;
 }
 
-/*
-.form_wrapper {
-    display:flex;
-    justify-content: center;
-    align-items: flex-start;
-    min-height:100vh;
-    background: transparent;
-    background: rgba(255, 255, 255, 0.4);
-    border: 2px solid #14213d;
-    box-shadow: 0 0 10px rgba(0,0,0,.4);
-    backdrop-filter: blur(20px);
-    width: 625px;
-    margin: 0 auto;
-    border-radius: 20px;
-}
-
-*/
 
 .form_wrapper {
     display: flex;
     justify-content: center;
     align-items: flex-start;
     min-height: 100vh;
-    background: transparent;
-    background: rgba(255, 255, 255, 0.4);
-    
-    box-shadow: 0 0 10px rgba(0,0,0,.4);
-    backdrop-filter: blur(15px);
     width: 625px;
+    
     margin: 0;
-
+    background: transparent;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 0 10px rgba(0,0,0,.4);
+    background: rgba(255, 255, 255, 0.4);
     border-radius: 20px;
 }
 
 .form_wrapper fieldset {
     border-radius: 15px;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
 }
 
 #firstName {
@@ -130,77 +118,98 @@ fieldset legend{
     width: 20%;
     margin-left:5px;
 }
+
 #state {
-    margin-left:3px;
-    background:#e5e5e5;
-    border: 2px solid rgba(255,255,255,.2);
-    border-radius: 40px;
-    width: 10%;
     font-size: 11px;
+    margin-left:3px;
+    width: 10%;
+    border-radius: 40px;
+    border: 2px solid rgba(255,255,255,.2);
+    background:#e5e5e5;
 }
-#postcode + label,
-#state + label {
-    margin-left: 30px; /* Adjust this value as needed */
+#postcode + label, #state + label {
+    margin-left: 30px;
 }
-.prefferedContact{
-  font-size:4em;
-}
+
 
 .input-box {
-  background:#e5e5e5;
-  border:none;
-  outline:none;
-  border: 2px solid rgba(255,255,255,.2);
-  border-radius: 40px;
-  width: 50%;
-  margin-left:1%;
-  font-size: 12px;
-  padding:1px 10px 0px 10px;
-  margin-bottom: 7px;
-}
-
-fieldset label i {
-    margin-right: 15px;
-}
-
-#product {
-    background:#e5e5e5;
-    border:none;
-    outline:none;
-    border: 2px solid rgba(255,255,255,.2);
-    border-radius: 40px;
-    width: 30%;
+    width: 50%;
     margin-left:1%;
     font-size: 12px;
     padding:1px 10px 0px 10px;
+    margin-bottom: 7px;
+    
+    outline:none;
+    background:#e5e5e5;
+    border:none;
+    border: 2px solid rgba(255,255,255,.2);
+    border-radius: 40px;
 }
 
+fieldset label i {
+    margin-right: 10px;
+}
 
+#product {
+    width: 40%;
+    margin-left:1%;
+    font-size: 12px;
+    padding:1px 10px 0px 10px;
+
+    outline:none;
+    background:#e5e5e5;
+    border:none;
+    border: 2px solid rgba(255,255,255,.2);
+    border-radius: 40px;
+}
 
 #comments {
-  height: 150px; 
-  width:400px;
-  resize: vertical;
-  border-radius: 7px;
+    height: 150px; 
+    width:400px;
+    resize: vertical;
+    border-radius: 7px;
 }
 
 .submit-button{
     width: 100%;
     height: 45px;
-    background: #fca311;
+    margin-top: 15px;
+    margin-bottom: 15px;
+
     border: none;
     outline:none;
-    border-radius: 10px;
     cursor: pointer;
+    border-radius: 10px;
+    background: #fca311;
+    box-shadow: 0 0 10px rgba(0,0,0,.4);
+    
     font-size: 20px;
     font-family: "amandine", sans-serif;
     font-weight: 700;
     font-style: normal;
-    box-shadow: 0 0 10px rgba(0,0,0,.4);
-    margin-top: 15px;
-    margin-bottom: 15px;
 }
 
+aside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #14213d;
+    color: white; 
+    padding: 20px;
+    border-radius:20px;
+}
 
+hr{
+    margin-top: 50px;
+}
+
+section[label="footer"] {
+
+    background-color: #14213d;
+    color: white;
+    text-align: center;
+    height: 300px;
+}
 
 
