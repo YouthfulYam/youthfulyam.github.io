@@ -1,7 +1,6 @@
+/*Moves whole page to the left*/
 * {
-    margin: 10;
-    padding: 10;
-    box-sizing: border-box;
+    transform: translateX(7.5px);
 }
 
 
@@ -11,12 +10,29 @@ body {
     font-style: normal;
     color:rgb(60,60,80);
     /*background: url("../images/demo_background.png")no-repeat;*/
-    background: url("../images/vector_graphic_tmp.jpg") no-repeat;
-    background-size: cover;
-    background-position: center;
-
+    /*background: url("../images/vector_graphic_tmp.jpg") no-repeat;*/
 
 }
+
+.form-section{
+  /*    
+  background: url("https://i.imgur.com/YwMvKWD.jpeg") no-repeat;
+    background-size: cover;
+    background-position: center;
+  */
+    background-color:#fff3EB;
+    background: url("https://i.imgur.com/vwqUyIL.png") no-repeat;
+    background-position: right;
+    background-size: contain;
+    position: relative;
+    flex: 1;
+    padding: 20px; /* Add padding to the right section */
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    margin-right: 40px;
+}
+
 
 .asterisk{
     color:red;
@@ -29,7 +45,6 @@ section h1 {
     font-weight: 700;
     font-style: normal;
     font-size: 3em;
-
 }
 
 fieldset legend{
@@ -39,44 +54,64 @@ fieldset legend{
     font-size: 2.25em;
 }
 
+/*
+.form_wrapper {
+    display:flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height:100vh;
+    background: transparent;
+    background: rgba(255, 255, 255, 0.4);
+    border: 2px solid #14213d;
+    box-shadow: 0 0 10px rgba(0,0,0,.4);
+    backdrop-filter: blur(20px);
+    width: 625px;
+    margin: 0 auto;
+    border-radius: 20px;
+}
+
+*/
 
 .form_wrapper {
-  display:flex;
-  justify-content: center;
-  align-items:center;
-  min-height:100vh;
-  background: transparent;
-  background: rgba(255, 255, 255, 0.4);/**/
-  border: 2px solid #14213d;
-  box-shadow: 0 0 10px rgba(0,0,0,.4);
-  backdrop-filter: blur(20px);
-  width: 600px;
-  margin: 0 auto;
-  border-radius: 20px;
-  
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    background: transparent;
+    background: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 0 10px rgba(0,0,0,.4);
+    backdrop-filter: blur(15px);
+    width: 625px;
+    margin: 0;
+    border-radius: 20px;
 }
 
 .form_wrapper fieldset {
     border-radius: 15px;
     margin-bottom: 10px;
-  }
+}
 
 #firstName {
-  width:28%;
-  margin-right:7%;
+    width:26%;
+    margin-right:5%;
   
 }
 
 #lastName {
-  width:28%;
+    width:27%;
 }
 
 #postcode {
-  width: 20%;
-  margin-left:2%;
+    width: 20%;
+    margin-left:2%;
 }
 #state {
-  margin-left:2%;
+    margin-left:2%;
+    background:#e5e5e5;
+    border: 2px solid rgba(255,255,255,.2);
+    border-radius: 40px;
+    width: 10%;
+    font-size: 11px;
 }
 
 .input-box {
@@ -92,31 +127,19 @@ fieldset legend{
   margin-bottom: 7px;
 }
 
-#state {
+#product {
     background:#e5e5e5;
-  border: 2px solid rgba(255,255,255,.2);
-  border-radius: 40px;
-  width: 10%;
-  font-size: 11px;
-  
+    border:none;
+    outline:none;
+    border: 2px solid rgba(255,255,255,.2);
+    border-radius: 40px;
+    width: 30%;
+    margin-left:1%;
+    font-size: 12px;
+    padding:1px 10px 0px 10px;
 }
 
-.submit-button{
-  width: 100%;
-  height: 45px;
-  background: #fca311;
-  border: none;
-  outline:none;
-  border-radius: 10px;
-  cursor: pointer;
-  font-size: 20px;
-      font-family: "amandine", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-  box-shadow: 0 0 10px rgba(0,0,0,.4);
-margin-top: 15px;
-  margin-bottom: 15px;
-}
+
 
 #comments {
   height: 150px; 
@@ -125,16 +148,23 @@ margin-top: 15px;
   border-radius: 7px;
 }
 
-#product {
-    background:#e5e5e5;
-  border:none;
-  outline:none;
-  border: 2px solid rgba(255,255,255,.2);
-  border-radius: 40px;
-  width: 30%;
-  margin-left:1%;
-  font-size: 12px;
-  padding:1px 10px 0px 10px;
+.submit-button{
+    width: 100%;
+    height: 45px;
+    background: #fca311;
+    border: none;
+    outline:none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    font-family: "amandine", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    box-shadow: 0 0 10px rgba(0,0,0,.4);
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
+
+
 
 

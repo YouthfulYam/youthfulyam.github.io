@@ -4,11 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
     <link rel="stylesheet" href="styles/index.css">
     <link rel="stylesheet" href="styles/enquire.css">
-      <!-- Fonts-->
-  <link rel="stylesheet" href="https://use.typekit.net/hja7nrk.css">
-    
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://use.typekit.net/hja7nrk.css">
+    <!-- Icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>Product Enquiry</title>
 </head>    
 
@@ -34,6 +36,7 @@
         <p>Eager to learn more about our amazing products? Or simply just want to get in touch with us? Well, we're here to help, fill out the form below and we will get in touch ASAP!</p>
     </section>    
     
+  <section class="form-section">
     <div class="form_wrapper">
         <form method="post" action="http://mercury.swin.edu.au/it000000/formtest.php" id ="enquiryForm">
             
@@ -93,11 +96,11 @@
                 
                 <fieldset>
                     <legend>Preferred Contact</legend>
-                    <label><input type="radio" name="preferredContact" value="email" checked> Email</label>
-                    <label><input type="radio" name="preferredContact" value="post"> Post</label>
-                    <label><input type="radio" name="preferredContact" value="phone"> Phone</label>
-                    <label><input type="radio" name="preferredContact" value="mobile"> Mobile</label>
-                    <label><input type="radio" name="preferredContact" value="sms"> SMS</label>
+                    <label><input type="radio" name="preferredContact" value="email" checked><i class='bx bxl-gmail'></i>Email</label>
+                    <label><input type="radio" name="preferredContact" value="post"><i class='bx bxs-envelope' ></i>Post</label>
+                    <label><input type="radio" name="preferredContact" value="phone"><i class='bx bx-phone-call' ></i>Phone</label>
+                    <label><input type="radio" name="preferredContact" value="mobile"> <i class='bx bx-mobile' ></i>Mobile</label>
+                    <label><input type="radio" name="preferredContact" value="sms"><i class='bx bx-chat' ></i>SMS</label>
                 </fieldset>
 
                 <fieldset>
@@ -122,6 +125,7 @@
                 </div>
         </form>
     </div>
+  </section>
     <aside>
         <label for="test">Test</label>
         <p><iframe src="images/test.html" name="viewerframe" allowfullscreen="true" height="467" width="830"></iframe></p>
