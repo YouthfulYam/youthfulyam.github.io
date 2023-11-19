@@ -13,7 +13,7 @@ body {
 }
 
 section h1 {
-    /* Title Font */
+    /* Section Title Font */
     font-family: "amandine", sans-serif;
     font-weight: 700;
     font-style: normal;
@@ -21,13 +21,15 @@ section h1 {
 }
 
 section{
+    /* Section margin/positioning */
     margin-bottom: 100px;
     margin-top: 100px;
     display: flex;
     justify-content: center; 
     align-items: center;
+
     background-color: #FFFDFB;
-    /* Generally sticking to a border radius of 20px */
+    /* Generally sticking to a border radius of 20px, editing when needed */
     border-radius:20px;
 }
 
@@ -46,11 +48,8 @@ section .intro-paragraph{
 
 
 .form-section{
-  /*    
-    background: url("https://i.imgur.com/YwMvKWD.jpeg") no-repeat;
-    background-size: cover;
-    background-position: center;
-  */
+    /*Form background image*/
+
     background: url("https://i.imgur.com/vwqUyIL.png") no-repeat;
     
     flex: 1;
@@ -60,14 +59,6 @@ section .intro-paragraph{
     position: relative;
     background-size: cover;
     background-position: center;
-    /*
-    display: flex;
-    background-position: right;
-    background-size: contain;
-    position: relative;
-    padding: 90px;
-  */
-  
   
     transform: translateX(10px);
     border-radius: 20px;
@@ -84,7 +75,7 @@ section .intro-paragraph{
 
 
 fieldset legend{
-    /* Sub heading */
+    /* Sub heading Font */
     font-family: "amandine", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -93,6 +84,7 @@ fieldset legend{
 
 
 .form_wrapper {
+    /* Form content box, positioning, background blurry */
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -106,6 +98,8 @@ fieldset legend{
     background: rgba(255, 255, 255, 0.4);
     border-radius: 20px;
 }
+
+/* Tweaks to form content spacing and textboxes */
 
 .form_wrapper fieldset {
     border-radius: 15px;
@@ -188,7 +182,7 @@ fieldset label i {
     outline:none;
     cursor: pointer;
     border-radius: 10px;
-    background: #fca311;
+    background: #fca311;    /* Highlight colour */
     box-shadow: 0 0 10px rgba(0,0,0,.4);
     
     font-size: 20px;
@@ -198,6 +192,7 @@ fieldset label i {
 }
 
 aside {
+    /* Aside positioning, bg. Testing marmoset */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -211,7 +206,9 @@ aside {
 hr{
     margin-top: 50px;
 }
-section[label="demo_product_left"] {
+
+/* Section for demoing products or having text on left/right with image adjacent */
+#demo_product_left {    
     background: url("https://media.cnn.com/api/v1/images/stellar/prod/190517181929-grump-cat-vegas-2016.jpg?q=w_3794,h_2578,x_0,y_0,c_fill") no-repeat;
     display: flex;
     background-position: left;
@@ -222,39 +219,45 @@ section[label="demo_product_left"] {
     transform: translateX(200px);
 }
 
-section[label="demo_product_left"] [data-label="text_wrapper_left"] {
+#demo_product_left [data-label="text_wrapper_left"] {
     flex: 1;
     position: relative;
     padding: 20px;
     transform: translateX(550px);
 }
 
-section[label="demo_product_right"] {    
+#demo_product_right {
+    
     background: url("https://media.cnn.com/api/v1/images/stellar/prod/190517181929-grump-cat-vegas-2016.jpg?q=w_3794,h_2578,x_0,y_0,c_fill") no-repeat;
     display: flex;
     background-position: right;
     background-size: contain;
     position: relative;
     padding: 90px;
+
     transform: translateX(-200px);
 }
 
-section[label="demo_product_right"] [data-label="text_wrapper_right"] {
+#demo_product_right [data-label="text_wrapper_right"] {
     flex: 1;
     position: relative;
     padding: 20px;
     transform: translateX(300px);
+  
 }
-section[label="demo_product_right"] , section[label="demo_product_left"]{
+#demo_product_right , #demo_product_left{
     background-color: #FFFDFB;
     padding: 60px;
 }
 
-
-section[label="footer"] {
+#footer {
 
     background-color: #14213d;
     color: white;
     text-align: center;
     height: 300px;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    border-radius:20px;
 }
