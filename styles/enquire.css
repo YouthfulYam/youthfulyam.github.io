@@ -47,7 +47,7 @@ section .intro-paragraph{
 
 .form-section{
   /*    
-  background: url("https://i.imgur.com/YwMvKWD.jpeg") no-repeat;
+    background: url("https://i.imgur.com/YwMvKWD.jpeg") no-repeat;
     background-size: cover;
     background-position: center;
   */
@@ -60,10 +60,18 @@ section .intro-paragraph{
     position: relative;
     background-size: cover;
     background-position: center;
-    
+    /*
+    display: flex;
+    background-position: right;
+    background-size: contain;
+    position: relative;
+    padding: 90px;
+  */
+  
+  
     transform: translateX(10px);
     border-radius: 20px;
-    padding: 100px;
+    padding: 250px;
     margin-right: 40px;
     background-color:#fff3EB;
 }
@@ -203,6 +211,45 @@ aside {
 hr{
     margin-top: 50px;
 }
+section[label="demo_product_left"] {
+    background: url("https://media.cnn.com/api/v1/images/stellar/prod/190517181929-grump-cat-vegas-2016.jpg?q=w_3794,h_2578,x_0,y_0,c_fill") no-repeat;
+    display: flex;
+    background-position: left;
+    background-size: contain;
+    position: relative;
+    padding: 90px;
+
+    transform: translateX(200px);
+}
+
+section[label="demo_product_left"] [data-label="text_wrapper_left"] {
+    flex: 1;
+    position: relative;
+    padding: 20px;
+    transform: translateX(550px);
+}
+
+section[label="demo_product_right"] {    
+    background: url("https://media.cnn.com/api/v1/images/stellar/prod/190517181929-grump-cat-vegas-2016.jpg?q=w_3794,h_2578,x_0,y_0,c_fill") no-repeat;
+    display: flex;
+    background-position: right;
+    background-size: contain;
+    position: relative;
+    padding: 90px;
+    transform: translateX(-200px);
+}
+
+section[label="demo_product_right"] [data-label="text_wrapper_right"] {
+    flex: 1;
+    position: relative;
+    padding: 20px;
+    transform: translateX(300px);
+}
+section[label="demo_product_right"] , section[label="demo_product_left"]{
+    background-color: #FFFDFB;
+    padding: 60px;
+}
+
 
 section[label="footer"] {
 
@@ -211,5 +258,3 @@ section[label="footer"] {
     text-align: center;
     height: 300px;
 }
-
-
