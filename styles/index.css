@@ -1,212 +1,11 @@
-
 body {
-    font-family: "adobe-garamond-pro", serif;
-    font-weight: 400;
-    font-style: normal;
-    color:rgb(60,60,80);
-    background-color:#fff3EB;
-  
-    /*background: url("../images/demo_background.png")no-repeat;*/
-    /*background: url("../images/vector_graphic_tmp.jpg") no-repeat;*/
-
-}
-
-section h1 {
-    font-family: "amandine", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-    font-size: 3em;
-}
-section{
-    margin-bottom: 100px;
-    margin-top: 100px;
-    display: flex;
-    justify-content: center; 
-    align-items: center;
-    background-color: #FFFDFB;
-    border-radius:20px;
-}
-
-section .intro-paragraph{
-    display:flex;
-    align-items:center;
-    justify-content: center;
-    margin-left: 200px;
-    height: 400px; 
-    width: 400px; /* Adjust the width as needed */
-    resize: vertical;
-    text-align: center;
-
-}
-
-
-.form-section{
-  /*    
-  background: url("https://i.imgur.com/YwMvKWD.jpeg") no-repeat;
-    background-size: cover;
-    background-position: center;
-  */
-    background-color:#fff3EB;
-    background: url("https://i.imgur.com/vwqUyIL.png") no-repeat;
-    background-position: right;
-    background-size: 100% 100%;
-    background-size: contain;
-    position: relative;
-    flex: 1;
-    padding: 100px;
-    background-size: cover;
-    background-position: center;
-    border-radius: 20px;
-
-    margin-right: 40px;
-    transform: translateX(10px);
-}
-
-
-.asterisk{
-    color:red;
-    font-size: 0.9em;
-}
-
-
-
-
-
-
-fieldset legend{
-    font-family: "amandine", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 2.25em;
-}
-
-
-.form_wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    min-height: 100vh;
-    background: transparent;
-    background: rgba(255, 255, 255, 0.4);
-    
-    box-shadow: 0 0 10px rgba(0,0,0,.4);
-    backdrop-filter: blur(15px);
-    width: 625px;
+    font-family: 'Arial', sans-serif;
     margin: 0;
-
-    border-radius: 20px;
+    padding: 0;
+    background-color: #f4f4f4; /* Light Gray background color */
+    background: linear-gradient(to bottom, #f4f4f4, #ddd) fixed; /* Gradient for added depth */
+    overflow-x: hidden; /* Prevent horizontal scroll on small screens */
 }
-
-.form_wrapper fieldset {
-    border-radius: 15px;
-    margin-bottom: 0px;
-}
-
-#firstName {
-    width:26%;
-    margin-right:5%;
-  
-}
-
-#lastName {
-    width:27%;
-}
-
-#postcode {
-    width: 20%;
-    margin-left:5px;
-}
-#state {
-    margin-left:3px;
-    background:#e5e5e5;
-    border: 2px solid rgba(255,255,255,.2);
-    border-radius: 40px;
-    width: 10%;
-    font-size: 11px;
-}
-#postcode + label, #state + label {
-    margin-left: 30px; /* Adjust this value as needed */
-}
-
-
-.input-box {
-  background:#e5e5e5;
-  border:none;
-  outline:none;
-  border: 2px solid rgba(255,255,255,.2);
-  border-radius: 40px;
-  width: 50%;
-  margin-left:1%;
-  font-size: 12px;
-  padding:1px 10px 0px 10px;
-  margin-bottom: 7px;
-}
-
-fieldset label i {
-    margin-right: 10px;
-}
-
-#product {
-    background:#e5e5e5;
-    border:none;
-    outline:none;
-    border: 2px solid rgba(255,255,255,.2);
-    border-radius: 40px;
-    width: 40%;
-    margin-left:1%;
-    font-size: 12px;
-    padding:1px 10px 0px 10px;
-}
-
-#comments {
-  height: 150px; 
-  width:400px;
-  resize: vertical;
-  border-radius: 7px;
-}
-
-.submit-button{
-    width: 100%;
-    height: 45px;
-    background: #fca311;
-    border: none;
-    outline:none;
-    border-radius: 10px;
-    cursor: pointer;
-    font-size: 20px;
-    font-family: "amandine", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-    box-shadow: 0 0 10px rgba(0,0,0,.4);
-    margin-top: 15px;
-    margin-bottom: 15px;
-}
-
-aside {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: #14213d;
-    color: white; 
-    padding: 20px;
-    border-radius:20px;
-}
-
-hr{
-    margin-top: 50px;
-}
-
-section[label="footer"] {
-
-    background-color: #14213d;
-    color: white;
-    text-align: center;
-    height: 300px;
-}
-
-
-/* Above is my stuff below is nav header*/
 
 header {
     background: linear-gradient(to right, #333, #1e90ff);
@@ -218,11 +17,6 @@ header {
     align-items: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: background 0.3s ease, box-shadow 0.3s ease;
-      font-family: "amandine", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-    font-size: 4em;
-  border-radius: 10px;
 }
 
 header:hover {
@@ -246,7 +40,36 @@ nav {
     color: #ff8c00; 
 }
 
+.search-bar {
+    padding-right: 8px;
+    display: flex;
+    align-items: center;
+}
 
+input[type="text"] {
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    transition: box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus {
+    box-shadow: 0 0 5px #1e90ff; 
+}
+
+button {
+    padding: 8px 12px;
+    background-color: #ff8c00; 
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background-color: #ff6347;
+}
 
 .nav-img{
  width: 50px;
@@ -272,3 +95,122 @@ nav a {
     font-size: 16px;
 }
 
+main {
+    background-color: #fff;
+    padding: 20px;
+    max-width: 75%;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #333;
+}
+
+caption {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+aside {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+h2 {
+    color: #333;
+    border-bottom: 2px solid #333;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+article {
+    margin-bottom: 20px;
+}
+
+h3 {
+    color: #1e90ff;
+}
+
+p {
+    color: #555;
+    line-height: 1.6;
+}
+
+article:hover {
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.Slideshow {
+  max-width: 75%;
+  position: relative;
+  margin: auto;
+  overflow: hidden;
+}
+
+.Slides {
+  display: none;
+  width: 100%;
+}
+
+#slide1:checked ~ .Slides:nth-child(2),
+#slide2:checked ~ .Slides:nth-child(4),
+#slide3:checked ~ .Slides:nth-child(6) {
+  display: block;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 16px;
+  border: none;
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
+
+.Slides a img {
+  width: 100%;
+  height: auto;
+}
