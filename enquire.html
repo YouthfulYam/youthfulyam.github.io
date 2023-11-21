@@ -4,109 +4,158 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/index.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/enquire.css">
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://use.typekit.net/hja7nrk.css">
+    <!-- Icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>Product Enquiry</title>
 </head>    
 
 <body>
-<header>
-    <nav>
-        <div class="logo">
-            <a href="index.html"><img src="images/nav-img.png" alt="nav-img" class="nav-img"></a>
-        </div>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="product.html">Products</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="enquire.html">Enquire</a></li>
-            <li><a href="enhancements.html">Enhancements</a></li>
-        </ul>
-    </nav>
-</header>
-
-<header>
-    <h1>Product Enquiry</h1>
+    <header>
         <nav>
-        <div class="logo">
+            <div class="logo">
             <a href="index.html"><img src="images/nav-img.png" alt="nav-img" class="nav-img"></a>
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="product.html">Products</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="enquire.html">Enquire</a></li>
+                <li><a href="enhancements.html">Enhancements</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<main>
+    <section>
+        <h1>Product Enquiry</h1>
+        <p class="intro-paragraph">Eager to learn more about our amazing products? Or simply just want to get in touch with us? Well, we're here to help, fill out the form below and we will get in touch ASAP!</p>
+    </section>    
+    
+  <section class="form-section"  aria-label="Product Enquiry">
+    <div class="form_wrapper">
+        <form method="post" action="http://mercury.swin.edu.au/it000000/formtest.php" id ="enquiryForm">
+            
+            <fieldset>
+                <legend>Contact Information</legend>
+
+                <label for="firstName">First Name:<span class="asterisk">&#42;</span></label>
+                <input type="text" id="firstName" name="firstName" maxlength="25" pattern="[A-Za-z]+" required class="input-box">
+
+                <label for="lastName">Last Name:<span class="asterisk">&#42;</span></label>
+                <input type="text" id="lastName" name="lastName" maxlength="25" pattern="[A-Za-z]+" required class="input-box">
+
+
+                <div>
+                <label for="companyName">Company Name:</label>
+                <input type="text" id="companyName" name="companyName" maxlength="25" pattern="[A-Za-z]+" placeholder="Optional" required class="input-box">
+                </div>
+                    
+                <div>
+                <label for="email">Email Address:<span class="asterisk">&#42;</span></label>
+                <input type="email" id="email" name="email" required class="input-box">
+                </div>
+                        
+                <div>
+                <label>Address:<span class="asterisk">&#42;</span></label>
+                </div>
+                <div >
+                <input type="text" id="lineAddress1" name="streetAddress" maxlength="40" placeholder="Address" required class="input-box">
+                </div>
+                <div >
+                <input type="text" id="lineAddress2" name= "apartmentAddress" maxlength="40" placeholder="Apartment, Suite etc (optional)" class="input-box">
+                </div>
+                <div >
+                <input type="text" id="suburb" name="suburb" maxlength="20" placeholder="Suburb/Town" required class="input-box">
+                </div>
+                
+                <label for="state">State:<span class="asterisk">&#42;</span></label>
+                <select id="state" name="state" required>
+                    <option value="" disabled selected>State</option>
+                    <option value="VIC">VIC</option>
+                    <option value="NSW">NSW</option>
+                    <option value="QLD">QLD</option>
+                    <option value="NT">NT</option>
+                    <option value="WA">WA</option>
+                    <option value="SA">SA</option>
+                    <option value="TAS">TAS</option>
+                    <option value="ACT">ACT</option>
+                </select>
+                
+                <label for="postcode">Postcode:<span class="asterisk">&#42;</span></label>
+                <input type="text" id="postcode" name="postcode" pattern="\d{4}" placeholder="Postal Code" required class="input-box">
+                
+                <div>
+                <label for="phoneNumber">Phone Number:<span class="asterisk">&#42;</span></label>
+                <input type="tel" id="phoneNumber" name="phoneNumber" maxlength="10" placeholder="Phone or Mobile" required class="input-box">
+                </div>
+                </fieldset>
+                
+                <fieldset>
+                    <legend>Preferred Contact</legend>
+                    <label><input type="radio" name="preferredContact" value="email" checked><i class='bx bxl-gmail'></i>Email</label>
+                    <label><input type="radio" name="preferredContact" value="post"><i class='bx bxs-envelope' ></i>Post</label>
+                    <label><input type="radio" name="preferredContact" value="phone"><i class='bx bx-phone-call' ></i>Phone</label>
+                    <label><input type="radio" name="preferredContact" value="mobile"> <i class='bx bx-mobile' ></i>Mobile</label>
+                    <label><input type="radio" name="preferredContact" value="sms"><i class='bx bx-chat' ></i>SMS</label>
+                </fieldset>
+
+                <fieldset>
+                    <legend> Product Name</legend>
+                    <label for="product">Product:<span class="asterisk">&#42;</span></label>
+                    <select id="product" name="product" required>
+                        <option value="" disabled selected>Select a product</option>
+                        <option value="autonomousVacuumCleaner">tmpName Roomba</option>
+                        <option value="autonomousPoolCleaner">tmpName Pool Cleaner</option>
+                        <option value="autonomousLawnmower">tmpName Lawnmower</option>
+                        <option value="tableServiceRobot">tmpName Table Service Robot</option>
+                    </select>
+                </fieldset>
+                
+                <fieldset>
+                    <legend> Product Enquiry</legend>
+                    <p><label for="comments">Comments:<span class="asterisk">&#42;</span></label></p>
+                    <p><textarea id="comments" name="comments" placeholder="Please describe what you want to find out" required></textarea></p>
+                </fieldset>
+                
+                <div>
+                    <button type="submit" class="submit-button">Submit</button>     
+                </div>
+        </form>
+    </div>
+  </section>
+    <aside>
+        <h2 class="test">Test</h2>
+        <div>
+            <iframe src="images/roomba_scene.html" name="viewerframe" allowfullscreen="" height="467" width="830"></iframe>
         </div>
-        <div class="search-bar">
-            <input type="text" placeholder="Search...">
-            <button type="submit">Search</button>
+    </aside>
+
+    <section id="demo_product_left">
+        <div data-label="text_wrapper_left">
+        <h1> Demo product </h1>
+        <p> Some inspirational words about our amazing product</p>
         </div>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="product.html">Products</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="enquire.html">Enquire</a></li>
-            <li><a href="enhancements.html">Enhancements</a></li>
-        </ul>
-    </nav>
-    <p>Eager to learn more about our amazing products? Or simply just want to get in touch with us? Well, we're here to help, fill out the form below and we will get in touch ASAP!</p>
-</header>
+    </section>
 
+    <section id="demo_product_right">
+        <div data-label="text_wrapper_right">
+        <h1> Demo product 2 </h1>
+        <p> Some inspirational words about our amazing product</p>
+        </div>
+    </section>
+    
+    <hr>
+    <div id="footer">
+        <p>
+            2023 HTML Heroes by &#169;Apex Automation
+        </p>
+    </div>
 
-<form method="post" action="http://mercury.swin.edu.au/it000000/formtest.php" id ="enquiryForm">
-
-    <fieldset>
-        <legend>Contact Information</legend>
-
-        <label for="firstName">First Name:</label>
-        <input type="text" id="firstName" name="firstName" maxlength="25" pattern="[A-Za-z]+" required>
-
-        <label for="lastName">Last Name:</label>
-        <input type="text" id="lastName" name="lastName" maxlength="25" pattern="[A-Za-z]+" required>
-
-        <p><label for="email">Email Address:</label>
-        <input type="email" id="email" name="email" required></p>
-        
-        <p> <label>Address:</label>
-        <input type="text" id="streetAddress" name="streetAddress" maxlength="40" placeholder="Apartment/Street Address" required></p>
-        <p><input type="text" id="suburb" name="suburb" maxlength="20" placeholder="Suburb/Town" required> </p>
-        
-        <label for="state">State:</label>
-        <select id="state" name="state" required>
-            <option value="VIC">VIC</option>
-            <option value="NSW">NSW</option>
-            <option value="QLD">QLD</option>
-            <option value="NT">NT</option>
-            <option value="WA">WA</option>
-            <option value="SA">SA</option>
-            <option value="TAS">TAS</option>
-            <option value="ACT">ACT</option>
-        </select>
-
-        <p><label for="postcode">Postcode:</label>
-            <input type="text" id="postcode" name="postcode" pattern="\d{4}" required></p>
-
-        <label for="phoneNumber">Phone Number:</label>
-        <input type="tel" id="phoneNumber" name="phoneNumber" maxlength="10" placeholder="Phone or Mobile" required>
-    </fieldset>
-
-    <fieldset>
-        <legend>Preferred Contact</legend>
-        <label><input type="radio" name="preferredContact" value="email" checked> Email</label>
-        <label><input type="radio" name="preferredContact" value="post"> Post</label>
-        <label><input type="radio" name="preferredContact" value="phone"> Phone</label>
-        <label><input type="radio" name="preferredContact" value="mobile"> Mobile</label>
-        <label><input type="radio" name="preferredContact" value="sms"> SMS</label>
-    </fieldset>
-
-    <label for="product">Product:</label>
-    <select id="product" name="product" required>
-        <option value="autonomousVacuumCleaner">tmpName Roomba</option>
-        <option value="autonomousPoolCleaner">tmpName Pool Cleaner</option>
-        <option value="autonomousLawnmower">tmpName Lawnmower</option>
-        <option value="tableServiceRobot">tmpName Table Service Robot</option>
-    </select>
-
-    <p><label for="comments">Comments:</label></p>
-    <p><textarea id="comments" name="comments" placeholder="Please describe what you want to find out" required></textarea></p>
-
-    <p><button type="submit">Submit</button></p>
-
-</form>
-
+</main>
 </body>
 </html>
-

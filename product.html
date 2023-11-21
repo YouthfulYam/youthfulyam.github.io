@@ -5,35 +5,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Category Page</title>
+    <link href="styles/product.css" rel="stylesheet"/>
 </head>
 
 <body>
 
     <nav>
-            <div class="logo">
+            <div class="navbar">
                 <a href="index.html"><img src="images/nav-img.png" alt="nav-img" class="nav-img"></a>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                        <div class="dropdown">
+                            <button class="dropbtn">
+                                <li><a href="product.html">Products</a></li>
+                                <i class="down"></i>
+                            </button>
+                        </div>
+                        <div class="dropdown-content">
+                            <a href="vacuum_robot.html">Vacuums</a>
+                            <a href="lawnmower_robot.html">Lawn-mowers</a>
+                            <a href="pool_robot.html">Pool cleaners</a>
+                        </div>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="enquire.html">Enquire</a></li>
+                    <li><a href="enhancements.html">Enhancements</a></li>
+                </ul>
             </div>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="product.html">Products</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="enquire.html">Enquire</a></li>
-                <li><a href="enhancements.html">Enhancements</a></li>
-            </ul>
     </nav>
 
     <section>
         <div class="product">
-            <h2>Product 1</h2>
-            <p>Description of Product 1.</p>
-            <p>Price: $19.99</p>
+            <h2>Automated house cleaners</h2>
+            <p>Our automated house cleaners are programmed to clean quietly and efficiently. View our range.</p>
+            <p>Price ranges from: $699.99 to $899.99</p>
             <button>Add to Cart</button>
         </div>
 
-        <div class="product" text-align: right>
-            <h2>Product 2</h2>
-            <p>Description of Product 2.</p>
-            <p>Price: $29.99</p>
+        <div class="product">
+            <h2>Automated lawn-mowers</h2>
+            <p>Our automated lawn-mowers are back for summer. When your grandparents can't mow the lawn anymore, we can.</p>
+            <p>Price ranges from: $3499.99 to $4599.99</p>
+            <button>Add to Cart</button>
+        </div>
+        
+        <div class="product">
+            <h2>Automated pool-cleaners</h2>
+            <p>Our newest product range, pool cleaners. To get you ready for summer without the extra effort.</p>
+            <p>Price ranges from: $1499.99 to $2599.99</p>
             <button>Add to Cart</button>
         </div>
 
