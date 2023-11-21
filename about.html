@@ -24,9 +24,53 @@
         </nav>
     </header>
 	<main>
-		<p class="members"><button type="button">Joshua Williams</button></p>
-		<p class="members"><button type="button">Brayden Hall</button></p>
-		<p class="members"><button type="button">Nicolas Rivera</button></p>
-		<p class="members"><button type="button">Cooper Simester</button></p>
-		<p class="members"><button type="button">Masachchige Thisaga</button></p>
+		<p class="members"><button type="button" onclick="JoshuaFunc()">Joshua Williams</button></p>
+		<p class="members"><button type="button" onclick="BraydenFunc()">Brayden Hall</button></p>
+		<p class="members"><button type="button" onclick="NicolasFunc()">Nicolas Rivera</button></p>
+		<p class="members"><button type="button" onclick="CooperFunc()">Cooper Simester</button></p>
+		<p class="members"><button type="button" onclick="MasachchigeFunc()">Masachchige Thisaga</button></p>
+		
+		<h1 class="Joshua">Joshua Williams</h1>
+		<h1 class="Brayden">Brayden Hall</h1>
+		<h1 class="Nicolas">Nicolas Rivera</h1>
+		<h1 class="Cooper">Cooper Simester</h1>
+		<h1 class="Masachchige">Masachchige Thisaga</h1>
 	</main>
+	<script>
+	function JoshuaFunc() {
+	document.getElementsByClassName("Joshua")[0].style.visibility = "visible";
+	document.getElementsByClassName("Brayden")[0].style.visibility = "hidden";
+	document.getElementsByClassName("Nicolas")[0].style.visibility = "hidden";
+	document.getElementsByClassName("Cooper")[0].style.visibility = "hidden";
+	document.getElementsByClassName("Masachchige")[0].style.visibility = "hidden";
+	}
+	function BraydenFunc() {
+	document.getElementsByClassName("Brayden")[0].style.visibility = "visible";
+	document.getElementsByClassName("Joshua")[0].style.visibility = "hidden";
+	document.getElementsByClassName("Nicolas")[0].style.visibility = "hidden";
+	document.getElementsByClassName("Cooper")[0].style.visibility = "hidden";
+	document.getElementsByClassName("Masachchige")[0].style.visibility = "hidden";
+	}
+	
+	function NicolasFunc() {
+	document.getElementsByClassName("Nicolas")[0].style.visibility = "visible";
+	document.getElementsByClassName("Brayden")[0].style.visibility = "hidden";
+	document.getElementsByClassName("Joshua")[0].style.visibility = "hidden";
+	document.getElementsByClassName("Cooper")[0].style.visibility = "hidden";
+	document.getElementsByClassName("Masachchige")[0].style.visibility = "hidden";
+	}
+	function CooperFunc() {
+	document.getElementsByClassName("Cooper")[0].style.visibility = "visible";
+	document.getElementsByClassName("Nicolas")[0].style.visibility = "hidden";
+	document.getElementsByClassName("Brayden")[0].style.visibility = "hidden";
+	document.getElementsByClassName("Joshua")[0].style.visibility = "hidden";
+	document.getElementsByClassName("Masachchige")[0].style.visibility = "hidden";
+	}
+	function MasachchigeFunc() {
+	document.getElementsByClassName("Masachchige")[0].style.visibility = "visible";
+	document.getElementsByClassName("Cooper")[0].style.visibility = "hidden";
+	document.getElementsByClassName("Nicolas")[0].style.visibility = "hidden";
+	document.getElementsByClassName("Brayden")[0].style.visibility = "hidden";
+	document.getElementsByClassName("Joshua")[0].style.visibility = "hidden";
+	}
+	</script>
