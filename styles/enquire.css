@@ -42,7 +42,8 @@ section .intro-paragraph{
     text-align: center;
     width: 400px;
     margin-left: 200px;
-    height: 400px; 
+    height: 400px;
+    min-width: 300px;
 
 }
 
@@ -217,6 +218,7 @@ hr{
     padding: 90px;
 
     transform: translateX(200px);
+
 }
 
 #demo_product_left [data-label="text_wrapper_left"] {
@@ -256,8 +258,122 @@ hr{
     color: white;
     text-align: center;
     height: 300px;
+  
     display: flex;
     justify-content: center; 
     align-items: center;
     border-radius:20px;
+}
+
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    section {
+        flex-direction: column;
+        text-align: left;
+        margin: 0;
+    }
+
+    section h1{
+        text-align:center;
+    }
+    section .intro-paragraph {
+        margin-left: 0;
+        margin-top: 0;
+        height: 5%;
+        width: 50%;
+    }
+
+    .form-section {
+        margin-right: 10px;
+        padding: 10px;
+    }
+
+    .form_wrapper {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .input-box {
+        width: 40%;
+        margin-left: 0;
+    }
+    #firstName {
+        width:40%;
+        margin-right:10%;
+    }
+    #lastName{
+        width:40%;
+    }
+
+    #state{
+        width:30%;
+        margin-right:40%;
+    }
+    label[for="postcode"] {
+        padding:0;
+        margin:0;
+    }
+    #postcode{
+        width:33%;
+    }
+    fieldset legend{
+        margin:0;
+        font-size:1em;
+}
+    fieldset{
+        width:90%;
+        margin-left:5px;
+}
+
+    #comments {
+    height: 150px;
+    width: 220px; 
+    margin: 0;
+}
+
+    aside{
+        width:80%;
+        margin-left:10px;
+        margin-top:20px;
+    }
+    iframe {
+        width: 100%;
+        height: auto;
+    }
+    #demo_product_left, #demo_product_right {
+        background-position: center; 
+        padding: 30px; 
+    }
+
+    #demo_product_left [data-label="text_wrapper_left"],
+    #demo_product_right [data-label="text_wrapper_right"] {
+        transform: none;
+    }
+
+    #demo_product_left, #demo_product_right {
+        transform: translateX(0);
+        padding:0;
+        margin-bottom:10px;
+    }
+    #demo_product_right{
+        margin-top:200px;
+    }
+    #demo_product_right{
+        margin-bottom:240px;
+    }
+  
+    #demo_product_right h1{
+        margin-top:500px;
+        margin:0;
+        padding:0;
+  }
+    #demo_product_left h1{
+        margin-top:500px;
+        margin:0;
+        padding:5px;
+    }
+    #demo_product_right [data-label="text_wrapper_right"], #demo_product_left [data-label="text_wrapper_left"] {
+    transform: translateY(230px);
+    }
 }
