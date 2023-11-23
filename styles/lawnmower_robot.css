@@ -107,6 +107,10 @@ main {
     float: left;
 }
 
+.LUBA2{
+    width: 30%;
+    float: right;
+}
 
 section {
     margin-bottom: 20px;
@@ -176,3 +180,5 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
+
