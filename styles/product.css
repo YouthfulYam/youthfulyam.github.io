@@ -103,6 +103,44 @@ main {
     padding: 20px;
 }
 
+/* Add this to the end of your product.css file */
+
+.product {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.product p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.product button {
+    padding: 10px 20px;
+    background-color: #ff8c00;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.product button:hover {
+    background-color: #ff6347;
+}
+
+
 section {
     margin-bottom: 20px;
 }
