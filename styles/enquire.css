@@ -198,6 +198,7 @@ fieldset label i {
 
 article {
     /* 3D viewer marmoset */
+    text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -211,10 +212,14 @@ iframe {
 	min-height: 650px;
 }
 
-hr{
+.marmo-thumbnail{
+  margin:10px;
+}
+
+.hr-footer{
     margin-top: 50px;
 }
-  
+
 /* Section for demoing products or having text on left/right with image adjacent */
 #demo_product_left {    
     background: url("https://media.cnn.com/api/v1/images/stellar/prod/190517181929-grump-cat-vegas-2016.jpg?q=w_3794,h_2578,x_0,y_0,c_fill") no-repeat;
