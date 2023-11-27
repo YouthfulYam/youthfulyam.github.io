@@ -207,6 +207,9 @@ article {
     padding: 20px;
     border-radius:20px;
 }
+iframe {
+	min-height: 650px;
+}
 
 hr{
     margin-top: 50px;
