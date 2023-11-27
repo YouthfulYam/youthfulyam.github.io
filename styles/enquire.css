@@ -215,6 +215,11 @@ iframe {
 .marmo-thumbnail{
   margin:10px;
 }
+.marmo-thumbnail img {
+	object-fit: contain;
+	height: auto;
+	width: 225;
+}
 
 .hr-footer{
     margin-top: 50px;
