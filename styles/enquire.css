@@ -303,7 +303,7 @@ body {
 }
 
   
-/* Responsive */
+/* Responsive for Mobile view w768 and below */
 @media screen and (max-width: 768px) {
     section {
         flex-direction: column;
@@ -322,8 +322,12 @@ body {
     }
   
     .form-section {
-        margin-right: 10px;
-        padding: 10px;
+    margin-right: 10px;
+    padding: 10px;
+      height:auto;
+      margin:0;
+      width:95%;
+      
     }
   
     .form_wrapper {
@@ -370,15 +374,19 @@ body {
         margin: 0;
     }
   
-    aside{
-        width:80%;
-        margin-left:10px;
+    article{
+        
+        margin:0;
         margin-top:20px;
     }
     iframe {
         width: 100%;
         height: auto;
     }
+  #demo_product_left{
+    margin-top:20px;
+  }
+  
         #demo_product_left,
         #demo_product_right {
         background-position: center; 
@@ -396,10 +404,9 @@ body {
     }
     #demo_product_right{
         margin-top:200px;
+      margin-bottom:240px;
     }
-    #demo_product_right{
-        margin-bottom:240px;
-    }
+
 
     #demo_product_right h1{
         margin-top:500px;
@@ -416,7 +423,47 @@ body {
     }
 
 }
+/* Responsive: limbo between mobile view and fullscreen */
+@media screen and (max-width: 1200px) {
+    #demo_product_left{
+        margin-top:20px;
+    }
+  
+        #demo_product_left,
+        #demo_product_right {
+        background-position: center; 
+        padding: 30px;
+        width:auto;
+        height:300px;
+
+    }
+  
+    #demo_product_left #text_wrapper_left, #demo_product_right #text_wrapper_right {
+        transform: none;
+    }
+
+    #demo_product_left, #demo_product_right {
+        transform: translateX(0);
+        padding:0;
+        margin-bottom:10px;
+    }
+    #demo_product_right{
+        margin-top:200px;
+        margin-bottom:240px;
+    }
 
 
-
-
+    #demo_product_right h1{
+        margin-top:500px;
+        margin:0;
+        padding:0;
+    }
+    #demo_product_left h1{
+        margin-top:500px;
+        margin:0;
+        padding:5px;
+    }
+    #demo_product_right #text_wrapper_right, #demo_product_left #text_wrapper_left {
+        transform: translateY(280px);
+    }
+}
