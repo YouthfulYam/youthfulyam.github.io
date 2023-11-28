@@ -1,3 +1,6 @@
+main{
+    height:auto;
+}
 
 body {
     /* General Font */
@@ -6,12 +9,9 @@ body {
     font-style: normal;
     color:rgb(60,60,80);
     background-color:#fff3EB;
-  
-    /*background: url("../images/demo_background.png")no-repeat;*/
-    /*background: url("../images/vector_graphic_tmp.jpg") no-repeat;*/
-
+    overflow-x: hidden; /* Prevent horizontal scroll on small screens */
 }
-
+  
 section h1 {
     /* Section Title Font */
     font-family: "amandine", sans-serif;
@@ -19,22 +19,21 @@ section h1 {
     font-style: normal;
     font-size: 3em;
 }
-
+  
 section{
     /* Section margin/positioning */
-    margin-bottom: 100px;
-    margin-top: 100px;
+    margin-bottom: 50px;
+    margin-top: 50px;
     display: flex;
     justify-content: center; 
     align-items: center;
-
     background-color: #FFFDFB;
     /* Generally sticking to a border radius of 20px, editing when needed */
     border-radius:20px;
 }
-
+  
 section .intro-paragraph{
-    /* Aligning paragraph to the right of the heading */
+    /* Aligning paragraph to the right of the heading, setting dimensions */
     display:flex;
     align-items:center;
     justify-content: center;
@@ -42,38 +41,38 @@ section .intro-paragraph{
     text-align: center;
     width: 400px;
     margin-left: 200px;
-    height: 400px; 
-
+    height: 250px;
+    min-width: 300px;
+  
 }
-
-
-.form-section{
+  
+  
+  .form-section{
     /*Form background image*/
-
-    background: url("https://i.imgur.com/vwqUyIL.png") no-repeat;
-    
+    background: url("../images/enquiryForm_bg_compressed.png") no-repeat;
     flex: 1;
-    background-position: right;
+    background-position: center;
     background-size: 100% 100%;
-    background-size: contain;
     position: relative;
     background-size: cover;
-    background-position: center;
-  
-    transform: translateX(10px);
+    height:400px;
+    width: 54%;
     border-radius: 20px;
     padding: 250px;
-    margin-right: 40px;
+    margin-left:100px;
     background-color:#fff3EB;
-}
-
-
+    
+  }
+  
+  
+  
 .asterisk{
+    /*All asterisks in form are red*/
     color:red;
     font-size: 0.9em;
-}
-
-
+  }
+  
+  
 fieldset legend{
     /* Sub heading Font */
     font-family: "amandine", sans-serif;
@@ -81,35 +80,36 @@ fieldset legend{
     font-style: normal;
     font-size: 2.25em;
 }
-
-
+  
+  
 .form_wrapper {
-    /* Form content box, positioning, background blurry */
+    /* Form content box, positioning, background blurry, dimensions */
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    min-height: 100vh;
+    /*min-height: 230vh;*/
     width: 625px;
-    
-    margin: 0;
+    /*margin: 0;*/
+    margin-top:30px;
     background: transparent;
     backdrop-filter: blur(15px);
     box-shadow: 0 0 10px rgba(0,0,0,.4);
     background: rgba(255, 255, 255, 0.4);
     border-radius: 20px;
+  
 }
-
+  
 /* Tweaks to form content spacing and textboxes */
-
 .form_wrapper fieldset {
-    border-radius: 15px;
-    margin-bottom: 0px;
+border-radius: 15px;
+margin-bottom: 0px;
+
 }
 
 #firstName {
     width:26%;
     margin-right:5%;
-  
+
 }
 
 #lastName {
@@ -135,12 +135,12 @@ fieldset legend{
 
 
 .input-box {
+    /* All comment boxes, adjusting sizes and appearance*/
     width: 50%;
     margin-left:1%;
     font-size: 12px;
     padding:1px 10px 0px 10px;
     margin-bottom: 7px;
-    
     outline:none;
     background:#e5e5e5;
     border:none;
@@ -157,7 +157,6 @@ fieldset label i {
     margin-left:1%;
     font-size: 12px;
     padding:1px 10px 0px 10px;
-
     outline:none;
     background:#e5e5e5;
     border:none;
@@ -166,6 +165,7 @@ fieldset label i {
 }
 
 #comments {
+    /*Comments box size */
     height: 150px; 
     width:400px;
     resize: vertical;
@@ -173,6 +173,7 @@ fieldset label i {
 }
 
 .submit-button{
+    /* Size */
     width: 100%;
     height: 45px;
     margin-top: 15px;
@@ -184,26 +185,43 @@ fieldset label i {
     border-radius: 10px;
     background: #fca311;    /* Highlight colour */
     box-shadow: 0 0 10px rgba(0,0,0,.4);
-    
+
+    /* Font button */
     font-size: 20px;
     font-family: "amandine", sans-serif;
     font-weight: 700;
     font-style: normal;
 }
+.submit-button:hover {
+    background-color: #ff6347;
+}
 
-aside {
-    /* Aside positioning, bg. Testing marmoset */
+article {
+    /* 3D viewer marmoset */
+    text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #14213d;
+    background-color: #14213D;
     color: white; 
     padding: 20px;
     border-radius:20px;
 }
+iframe {
+	min-height: 650px;
+}
 
-hr{
+.marmo-thumbnail{
+  margin:10px;
+}
+.marmo-thumbnail img {
+	object-fit: contain;
+	height: auto;
+	width: 225;
+}
+
+.hr-footer{
     margin-top: 50px;
 }
 
@@ -215,11 +233,11 @@ hr{
     background-size: contain;
     position: relative;
     padding: 90px;
-
     transform: translateX(200px);
+  
 }
-
-#demo_product_left [data-label="text_wrapper_left"] {
+  
+#demo_product_left #text_wrapper_left {
     flex: 1;
     position: relative;
     padding: 20px;
@@ -227,37 +245,235 @@ hr{
 }
 
 #demo_product_right {
-    
     background: url("https://media.cnn.com/api/v1/images/stellar/prod/190517181929-grump-cat-vegas-2016.jpg?q=w_3794,h_2578,x_0,y_0,c_fill") no-repeat;
     display: flex;
     background-position: right;
     background-size: contain;
     position: relative;
-    padding: 90px;
-
     transform: translateX(-200px);
 }
 
-#demo_product_right [data-label="text_wrapper_right"] {
+#demo_product_right #text_wrapper_right {
     flex: 1;
     position: relative;
     padding: 20px;
     transform: translateX(300px);
-  
 }
+
 #demo_product_right , #demo_product_left{
     background-color: #FFFDFB;
     padding: 60px;
 }
 
 #footer {
-
     background-color: #14213d;
     color: white;
     text-align: center;
-    height: 300px;
+    height: 200px;
+
     display: flex;
     justify-content: center; 
     align-items: center;
     border-radius:20px;
+}
+
+body {
+    scroll-behavior: smooth;
+}
+
+/* Style for the scroll button */
+#go-button {
+    top: 10px;
+    left: 10px;
+    padding: 10px 20px;
+    backdrop-filter: blur(4px);
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    cursor: pointer;
+    position: fixed;
+    z-index: 3;
+    font-family: "amandine", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1em;
+}
+.bx.bx-news {
+    /* Move text to right of logo (button) */
+    margin-right:15px;
+}
+
+
+#go-button a {
+    text-decoration: none; /* Remove the hyperlink underscore */
+    color: white;
+    text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;/* Adds black border around text */
+}
+#go-button:hover {
+    background-color: rgba(255,255,255,1);
+}
+
+  
+/* Responsive for Mobile view w768 and below */
+@media screen and (max-width: 768px) {
+    section {
+        flex-direction: column;
+        text-align: left;
+        margin: 0;
+    }
+  
+    section h1{
+        text-align:center;
+    }
+    section .intro-paragraph {
+        margin-left: 0;
+        margin-top: 0;
+        height: 5%;
+        width: 50%;
+    }
+  
+    .form-section {
+    margin-right: 10px;
+    padding: 10px;
+      height:auto;
+      margin:0;
+      width:95%;
+      
+    }
+  
+    .form_wrapper {
+        width: 90%;
+        padding: 20px;
+    }
+  
+    .input-box {
+        width: 40%;
+        margin-left: 0;
+    }
+    #firstName {
+        width:40%;
+        margin-right:10%;
+    }
+    #lastName{
+        width:40%;
+    }
+  
+    #state{
+        width:30%;
+        margin-right:40%;
+    }
+    label[for="postcode"] {
+        padding:0;
+        margin:0;
+    }
+    #postcode{
+        width:33%;
+    }
+    fieldset legend{
+        margin:0;
+        font-size:1em;
+    }
+    fieldset
+    {
+        width:90%;
+        margin-left:5px;
+    }
+  
+    #comments {
+        height: 150px;
+        width: 220px; 
+        margin: 0;
+    }
+  
+    article{
+        
+        margin:0;
+        margin-top:20px;
+    }
+    iframe {
+        width: 100%;
+        height: auto;
+    }
+  #demo_product_left{
+    margin-top:20px;
+  }
+  
+        #demo_product_left,
+        #demo_product_right {
+        background-position: center; 
+        padding: 30px; 
+    }
+  
+    #demo_product_left #text_wrapper_left, #demo_product_right #text_wrapper_right {
+        transform: none;
+    }
+
+    #demo_product_left, #demo_product_right {
+        transform: translateX(0);
+        padding:0;
+        margin-bottom:10px;
+    }
+    #demo_product_right{
+        margin-top:200px;
+      margin-bottom:240px;
+    }
+
+
+    #demo_product_right h1{
+        margin-top:500px;
+        margin:0;
+        padding:0;
+    }
+    #demo_product_left h1{
+        margin-top:500px;
+        margin:0;
+        padding:5px;
+    }
+    #demo_product_right #text_wrapper_right, #demo_product_left #text_wrapper_left {
+        transform: translateY(230px);
+    }
+
+}
+/* Responsive: limbo between mobile view and fullscreen */
+@media screen and (max-width: 1200px) {
+    #demo_product_left{
+        margin-top:20px;
+    }
+  
+        #demo_product_left,
+        #demo_product_right {
+        background-position: center; 
+        padding: 30px;
+        width:auto;
+        height:300px;
+
+    }
+  
+    #demo_product_left #text_wrapper_left, #demo_product_right #text_wrapper_right {
+        transform: none;
+    }
+
+    #demo_product_left, #demo_product_right {
+        transform: translateX(0);
+        padding:0;
+        margin-bottom:10px;
+    }
+    #demo_product_right{
+        margin-top:200px;
+        margin-bottom:240px;
+    }
+
+
+    #demo_product_right h1{
+        margin-top:500px;
+        margin:0;
+        padding:0;
+    }
+    #demo_product_left h1{
+        margin-top:500px;
+        margin:0;
+        padding:5px;
+    }
+    #demo_product_right #text_wrapper_right, #demo_product_left #text_wrapper_left {
+        transform: translateY(280px);
+    }
 }

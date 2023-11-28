@@ -31,10 +31,13 @@
     </header>
 
 <main>
-    <section>
+    <section id="intro-block">
         <h1>Product Enquiry</h1>
         <p class="intro-paragraph">Eager to learn more about our amazing products? Or simply just want to get in touch with us? Well, we're here to help, fill out the form below and we will get in touch ASAP!</p>
-    </section>    
+    </section>
+    <aside>
+        <button id="go-button"><a href="#enquiryForm"><i class='bx bx-news'></i>Go to Form Section </a></button>
+    </aside>
     
   <section class="form-section"  aria-label="Product Enquiry">
     <div class="form_wrapper">
@@ -128,22 +131,33 @@
         </form>
     </div>
   </section>
-    <aside>
-        <h2 class="test">Test</h2>
-        <div>
-            <iframe src="images/roomba_scene.html" name="viewerframe" allowfullscreen="" height="467" width="830"></iframe>
-        </div>
-    </aside>
 
+    <article>
+        <h2 class="3d-viewer">Check out some of our products!</h2>
+        <div>
+            <iframe src="images/roomba_scene.html" name="viewerframe" allowfullscreen="true" height="467" width="830"></iframe>
+            <br>
+            <a href="images/roomba_scene.html" target="viewerframe" class="marmo-thumbnail">
+                <img decoding="async" src="images/roomba_thumbnail.png" data-orig-src="images/roomba_thumbnail.png" alt="" width="212.5" height="255">
+            </a>
+            <a href="images/alternate_roomba.html" target="viewerframe" class="marmo-thumbnail">
+                <img decoding="async" src="images/alternate_roomba_thumbnail.png" data-orig-src="images/alternate_roomba_thumbnail.png" alt="" width="212.5" height="225">
+            </a>
+            <a href="images/lawnmower.html" target="viewerframe" class="marmo-thumbnail">
+                <img decoding="async" src="images/lawnmower_thumbnail.png" data-orig-src="images/lawnmower_thumbnail.png" alt="" width="212.5" height="225">
+            </a>
+        </div>
+    </article>
+  
     <section id="demo_product_left">
-        <div data-label="text_wrapper_left">
+        <div id="text_wrapper_left">
         <h1> Demo product </h1>
         <p> Some inspirational words about our amazing product</p>
         </div>
     </section>
 
     <section id="demo_product_right">
-        <div data-label="text_wrapper_right">
+        <div id="text_wrapper_right">
         <h1> Demo product 2 </h1>
         <p> Some inspirational words about our amazing product</p>
         </div>
@@ -152,7 +166,7 @@
     <hr>
     <div id="footer">
         <p>
-            2023 HTML Heroes by &#169;Apex Automation
+            2023 &#169;Apex Automation by HTML Heroes!
         </p>
     </div>
 
