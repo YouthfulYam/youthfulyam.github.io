@@ -141,7 +141,7 @@ main {
     display: block;
 }
 
-.dropdown:hover .navbar li {
+.dropdown:hover {
     background-color: #ff6347;
 }
 
