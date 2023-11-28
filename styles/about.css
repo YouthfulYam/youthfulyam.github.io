@@ -8,12 +8,11 @@ button {	font-size: 1.2em;
 			border-style: solid;
 			border-radius: 0px;
 			background-color: #f4f4f4;
-			float: left;
+			
+			
 			}
 button:focus {background-color: #ffffff;
-	border-bottom: hidden;
 }
 
 .member-container {align: left;}
 
-//
