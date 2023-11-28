@@ -16,3 +16,5 @@ button:focus {background-color: #ffffff;
 
 .member-container {align: left;}
 
+img { float: right;
+	margin-left: 20px; }
