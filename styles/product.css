@@ -103,6 +103,21 @@ main {
     padding: 20px;
 }
 
+/* TESTING DROPDOWN BOX */
+
+.dropdown-content {
+    display: none;
+}
+
+.dropdown-content a {
+    float: none;
+    text-align: left;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
 /* Add this to the end of your product.css file */
 
 .product {
