@@ -1,6 +1,7 @@
-.members {	display: inline;}
+.members {	display: inline;
+	text-align: top;}
 
-button:hover {background-color: #ffffff}
+button:hover {background-color: #ffffff;}
 button {	font-size: 1.2em;
 			color: black;
 			border: 4px solid #ccc;
@@ -13,4 +14,5 @@ button:focus {background-color: #ffffff;
 	border-bottom: hidden;
 }
 
+.member-container {align: left;}
 
