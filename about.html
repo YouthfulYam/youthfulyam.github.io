@@ -8,7 +8,7 @@
 	<title>About Us</title>
 </head>
 
-<body>
+<body onload="showMember('JoshuaContainer')">
     <header>
         <nav>
             <div class="logo">
@@ -24,53 +24,80 @@
         </nav>
     </header>
 	<main>
-		<p class="members"><button type="button" onclick="JoshuaFunc()">Joshua Williams</button></p>
-		<p class="members"><button type="button" onclick="BraydenFunc()">Brayden Hall</button></p>
-		<p class="members"><button type="button" onclick="NicolasFunc()">Nicolas Rivera</button></p>
-		<p class="members"><button type="button" onclick="CooperFunc()">Cooper Simester</button></p>
-		<p class="members"><button type="button" onclick="MasachchigeFunc()">Masachchige Thisaga</button></p>
+		<p class="members"><button type="button" onclick="showMember('JoshuaContainer')">Joshua Williams</button></p>
+		<p class="members"><button type="button" onclick="showMember('BraydenContainer')">Brayden Hall</button></p>
+		<p class="members"><button type="button" onclick="showMember('NicolasContainer')">Nicolas Rivera</button></p>
+		<p class="members"><button type="button" onclick="showMember('CooperContainer')">Cooper Simester</button></p>
+		<p class="members"><button type="button" onclick="showMember('MasachchigeContainer')">Masachchige Thisaga</button></p>
+		<div id="JoshuaContainer" class="member-container">
+			<br>
+			<h1>Joshua Williams</h1>
+			<p>Joshua Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+			sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim 
+			ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
+			ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate 
+			velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat 
+			non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</p>
+		</div>
+		<div id="BraydenContainer" class="member-container">
+			<br>
+			<h1>Brayden Hall</h1>
+			<p>Brayden Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+			sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim 
+			ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
+			ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate 
+			velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat 
+			non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</p>
+		</div>
+		<div id="NicolasContainer" class="member-container">
+			<br>
+			<h1>Nicolas Rivera</h1>
+			<p>Nicolas Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+			sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim 
+			ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
+			ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate 
+			velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat 
+			non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</div>
+		<div id="CooperContainer" class="member-container">
+			<br>
+			<h1>Cooper Simester</h1>
+			<p>Cooper Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+			sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim 
+			ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
+			ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate 
+			velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat 
+			non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</div>
+		<div id="MasachchigeContainer" class="member-container">
+			<br>
+			<h1>Masachchige Thisaga</h1>
+			<p>Masachchige Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+			sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim 
+			ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
+			ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate 
+			velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat 
+			non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</div>
 		
-		<h1 class="Joshua">Joshua Williams</h1>
-		<h1 class="Brayden">Brayden Hall</h1>
-		<h1 class="Nicolas">Nicolas Rivera</h1>
-		<h1 class="Cooper">Cooper Simester</h1>
-		<h1 class="Masachchige">Masachchige Thisaga</h1>
+			
+	
+	
+
 	</main>
 	<script>
-	function JoshuaFunc() {
-	document.getElementsByClassName("Joshua")[0].style.visibility = "visible";
-	document.getElementsByClassName("Brayden")[0].style.visibility = "hidden";
-	document.getElementsByClassName("Nicolas")[0].style.visibility = "hidden";
-	document.getElementsByClassName("Cooper")[0].style.visibility = "hidden";
-	document.getElementsByClassName("Masachchige")[0].style.visibility = "hidden";
-	}
-	function BraydenFunc() {
-	document.getElementsByClassName("Brayden")[0].style.visibility = "visible";
-	document.getElementsByClassName("Joshua")[0].style.visibility = "hidden";
-	document.getElementsByClassName("Nicolas")[0].style.visibility = "hidden";
-	document.getElementsByClassName("Cooper")[0].style.visibility = "hidden";
-	document.getElementsByClassName("Masachchige")[0].style.visibility = "hidden";
-	}
+	function showMember(containerID) {
+	var containers = document.getElementsByClassName('member-container');
+	for (var i=0; i<containers.length; i++) {
+		containers[i].style.display = 'none';
+		}
 	
-	function NicolasFunc() {
-	document.getElementsByClassName("Nicolas")[0].style.visibility = "visible";
-	document.getElementsByClassName("Brayden")[0].style.visibility = "hidden";
-	document.getElementsByClassName("Joshua")[0].style.visibility = "hidden";
-	document.getElementsByClassName("Cooper")[0].style.visibility = "hidden";
-	document.getElementsByClassName("Masachchige")[0].style.visibility = "hidden";
-	}
-	function CooperFunc() {
-	document.getElementsByClassName("Cooper")[0].style.visibility = "visible";
-	document.getElementsByClassName("Nicolas")[0].style.visibility = "hidden";
-	document.getElementsByClassName("Brayden")[0].style.visibility = "hidden";
-	document.getElementsByClassName("Joshua")[0].style.visibility = "hidden";
-	document.getElementsByClassName("Masachchige")[0].style.visibility = "hidden";
-	}
-	function MasachchigeFunc() {
-	document.getElementsByClassName("Masachchige")[0].style.visibility = "visible";
-	document.getElementsByClassName("Cooper")[0].style.visibility = "hidden";
-	document.getElementsByClassName("Nicolas")[0].style.visibility = "hidden";
-	document.getElementsByClassName("Brayden")[0].style.visibility = "hidden";
-	document.getElementsByClassName("Joshua")[0].style.visibility = "hidden";
+	var selectedContainer = document.getElementById(containerID);
+	selectedContainer.style.display = 'block';
+	selectedContainer.scrollIntoView({ behavior: 'smooth'});
 	}
 	</script>
+
+	
