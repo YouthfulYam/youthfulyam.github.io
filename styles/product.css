@@ -107,14 +107,21 @@ main {
 
 .dropdown-content {
     display: none;
+    position: absolute;
+    background-color: #ff6347;
 }
 
 .dropdown-content a {
-    float: none;
-    text-align: left;
+    display: block;
+    padding: 12px;
+    color: black;
 }
 
-.dropdown:hover .dropdown-content {
+.dropdown-content a:hover {
+    background-color: #ff6347;
+}
+
+.navbar li:hover .dropdown-content {
     display: block;
 }
 
