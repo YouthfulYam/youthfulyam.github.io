@@ -18,15 +18,22 @@
     <header>
         <nav>
             <div class="logo">
-            <a href="index.html"><img src="images/nav-img.png" alt="nav-img" class="nav-img"></a>
+                <a href="index.html"><img src="images/nav-img.png" alt="nav-img" class="nav-img"></a>
             </div>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="product.html">Products</a></li>
-                <li><a href="about.html">About</a></li>
+                <li class="dropdown">
+                    <button class="dropbtn"><a href="product.html">Products</a></button>
+                    <div class="dropdown-content">
+                        <a href="vacuum_robot.html">Vacuums</a>
+                        <a href="lawnmower_robot.html">Lawn mowers</a>
+                        <a href="pool_robot.html">Pool cleaners</a>
+                    </div>
+                </li>
                 <li><a href="enquire.html">Enquire</a></li>
+                <li><a href="about.html">About</a></li>
                 <li><a href="enhancements.html">Enhancements</a></li>
-            </ul>
+            </ul> 
         </nav>
     </header>
 
@@ -113,8 +120,10 @@
                     <select id="product" name="product" required>
                         <option value="" disabled selected>Select a product</option>
                         <option value="autonomousVacuumCleaner">tmpName Roomba</option>
-                        <option value="autonomousPoolCleaner">tmpName Pool Cleaner</option>
-                        <option value="autonomousLawnmower">tmpName Lawnmower</option>
+                        <option value="autonomousPoolCleaner1">GT Freedom i80</option>
+                        <option value="autonomousPoolCleaner2">Segway Navimow H800A-VF 800m2</option>
+                        <option value="autonomousLawnmower1">LUBA AWD 5000</option>
+                        <option value="autonomousLawnmower2">Segway Navimow H800A-VF 800m2</option>
                         <option value="tableServiceRobot">tmpName Table Service Robot</option>
                     </select>
                 </fieldset>
@@ -151,18 +160,28 @@
   
     <section id="demo_product_left">
         <div id="text_wrapper_left">
-        <h1> Demo product </h1>
-        <p> Some inspirational words about our amazing product</p>
-        </div>
+                <a href="https://youthfulyam.github.io/pool_robot.html">
+                    <h1> LUBA AWD 5000 </h1>
+                    <p> Introducing the LUBA AWD 5000, a robotic lawnmower with quick setup, all-wheel drive for 37-degree slopes, and obstacle avoidance. Mow up to 1.5 acres with a rate of 500m2/hour! Starting at $4,399 AUD</p>
+                </a>
+            </div>
     </section>
 
     <section id="demo_product_right">
         <div id="text_wrapper_right">
-        <h1> Demo product 2 </h1>
-        <p> Some inspirational words about our amazing product</p>
-        </div>
+                <a href="https://youthfulyam.github.io/pool_robot.html">
+                    <h1> GT Freedom i80 </h1>
+                    <p> Check out our Pool cleaner, the GT Freedom i80. Suitable for pools up to 15m, 8 hour battery life and with its Intelligent navigation, it will map and clean your whole pool efficiently!</p>
+                </a>
+            </div>
     </section>
     
+    <section id="demo_logo_left">
+        <div id="text_wrapper_left_logo">
+                    <p> Your Path to Effortles Cleanliness</p>
+                </a>
+            </div>
+    </section>
     <hr>
     <div id="footer">
         <p>

@@ -1,12 +1,17 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/index.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/enhancements.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://use.typekit.net/hja7nrk.css">
     <title>Enhancements</title>
 </head>
+
 <body>
     <header>
         <nav>
@@ -15,18 +20,67 @@
             </div>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="product.html">Products</a></li>
+                <li class="dropdown">
+                    <button class="dropbtn"><a href="product.html">Products</a></button>
+                    <div class="dropdown-content">
+                        <a href="vacuum_robot.html">Vacuums</a>
+                        <a href="lawnmower_robot.html">Lawn mowers</a>
+                        <a href="pool_robot.html">Pool cleaners</a>
+                    </div>
+                </li>
                 <li><a href="enquire.html">Enquire</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="enhancements.html">Enhancements</a></li>
             </ul>
         </nav>
     </header>
-    <h1>Enhancements</h1> 
-<ol>
-    <li>nav bar</li>
-    <li>responsive</li>
-    <li>footer</li>
-</ol>
+
+    <section>
+        <h1>Enhancements</h1>
+      <h2> Nicolas Rivera </h2>
+        <ol class="enhancements-content">
+            <li><h2>3D Model Viewer &ndash; Marmoset</h2>
+                <ul>
+                    <li>A tool used to showcase 3D models, one of the features it has is that it is compatible with HTML.</li>
+                    <li>I also wanted to have a small gallery of models so that you could switch between different models. This was achieved by having three thumbnail images which each have their own respective hyperlink. When clicked the iViewer will load up that HTML page, thus the new model.</li>
+                    <li>Source of Reference: <a href="https://marmoset.co/posts/getting-started-with-viewer/"> Marmoset 3D Viewer</a></li>
+                    <li>Hyperlink to Implementation: <a href="https://youthfulyam.github.io/enquire.html">Enquire page</a></li>
+                </ul>
+            </li>
+            <li><h2>Responsive Design</h2>
+                <ul>
+                    <li>Ensures that the whole page is both suitable and presentable for both desktop and mobile use.</li>
+                    <li>Made sure that it works for a variety of different small and large width sizes, using an overflow-x to prevent undesired movement on the x-axis.</li>
+                    <li>Source of Reference: <a href="https://www.w3schools.com/css/css_rwd_intro.asp">Responsiveness </a></li>
+                    <li>Hyperlink to Implementation: <a href="https://youthfulyam.github.io/enquire.html">Enquire page</a></li>
+                </ul>
+            </li>
+            <li><h2>Scroll Button</h2>
+                <ul>
+                    <li>I experimented with a version where the enquiry form would follow with the page as the user scrolls, but I wasn’t satisfied with how it looked and I wasn’t able to find a harmony of having extra elements without being obscured by the form, so I discovered a way to have a button to take you to a certain section of the page.</li>
+                    <li>While being limited by not using JavaScript, I used a simple HTML implementation.</li>
+                    <li>Source of reference: <a href="https://www.w3schools.com/howto/howto_css_smooth_scroll.asp#section2">Scroll </a></li>
+                    <li>Hyperlink to Implementation: <a href="https://youthfulyam.github.io/enquire.html">Enquire Page</a></li>
+                </ul>
+            </li>
+            <li><h2>Product Display &ndash; Hover</h2>
+                <ul>
+                    <li>A setup to display images such as a product or logo in an aesthetically pleasing way.</li>
+                    <li>Using CSS elements to position an image to the left with text on the right (alternating pattern).</li>
+                    <li>A hover effect so that the user can click on the text to go directly to the product page with a smooth scroll effect.</li>
+                    <li>Source of Reference: <a href="https://www.w3schools.com/cssref/sel_hover.php">CSS Hover Selector </a></li>
+                    <li>Hyperlink to Implementation: <a href="https://youthfulyam.github.io/enquire.html">Enquire Page</a></li>
+                </ul>
+            </li>
+            <li><h2>Product Display &ndash; Grid Display</h2>
+                <ul>
+                    <li>A stylistic grid display mixed with images and text to attract and keep the attention of the user.</li>
+                    <li>Has links to each product page.</li>
+                    <li>Source of reference: <a href="https://www.w3schools.com/cssref/pr_grid-template.php">Grid Display </a></li>
+                    <li>Hyperlink to Implementation: <a href="https://youthfulyam.github.io/product.html">Product Page</a></li>
+                </ul>
+            </li>
+        </ol>
+    </section>
 </body>
 </html>

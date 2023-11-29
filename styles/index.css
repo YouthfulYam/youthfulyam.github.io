@@ -134,6 +134,9 @@ main {
 #slide2:checked ~ .Slides:nth-child(4),
 #slide3:checked ~ .Slides:nth-child(6) {
     display: block;
+    position: relative;
+    display: flex;
+    align-items: center;
 }
 
 .Slides a img {

@@ -10,6 +10,7 @@ body {
     color:rgb(60,60,80);
     background-color:#fff3EB;
     overflow-x: hidden; /* Prevent horizontal scroll on small screens */
+    scroll-behavior: smooth;
 }
   
 section h1 {
@@ -50,6 +51,7 @@ section .intro-paragraph{
   .form-section{
     /*Form background image*/
     background: url("../images/enquiryForm_bg_compressed.png") no-repeat;
+    /*background: url("https://i.imgur.com/vwqUyIL.png") no-repeat;*/
     flex: 1;
     background-position: center;
     background-size: 100% 100%;
@@ -101,9 +103,8 @@ fieldset legend{
   
 /* Tweaks to form content spacing and textboxes */
 .form_wrapper fieldset {
-border-radius: 15px;
-margin-bottom: 0px;
-
+    border-radius: 15px;
+    margin-bottom: 0px;
 }
 
 #firstName {
@@ -213,27 +214,33 @@ iframe {
 }
 
 .marmo-thumbnail{
-  margin:10px;
+    margin:10px;
 }
 .marmo-thumbnail img {
-	object-fit: contain;
-	height: auto;
-	width: 225;
+    object-fit: contain;
+    height: auto;
+    width: 225;
+}
+.marmo-thumbnail img:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color: green;
+    cursor: pointer;
 }
 
 .hr-footer{
     margin-top: 50px;
 }
-
+  
 /* Section for demoing products or having text on left/right with image adjacent */
 #demo_product_left {    
-    background: url("https://media.cnn.com/api/v1/images/stellar/prod/190517181929-grump-cat-vegas-2016.jpg?q=w_3794,h_2578,x_0,y_0,c_fill") no-repeat;
+    background: url("https://youthfulyam.github.io/images/LUBA1.jpg") no-repeat;
     display: flex;
     background-position: left;
     background-size: contain;
     position: relative;
     padding: 90px;
     transform: translateX(200px);
+    height:250px;
   
 }
   
@@ -241,44 +248,84 @@ iframe {
     flex: 1;
     position: relative;
     padding: 20px;
-    transform: translateX(550px);
+    transform: translateX(100px);
 }
 
 #demo_product_right {
-    background: url("https://media.cnn.com/api/v1/images/stellar/prod/190517181929-grump-cat-vegas-2016.jpg?q=w_3794,h_2578,x_0,y_0,c_fill") no-repeat;
+    background: url("https://youthfulyam.github.io/images/GT_FreedomEdit.png") no-repeat;
     display: flex;
     background-position: right;
     background-size: contain;
     position: relative;
-    transform: translateX(-200px);
+    transform: translateX(-150px); /*Moves section to left*/
+    height:250px;
 }
 
 #demo_product_right #text_wrapper_right {
     flex: 1;
     position: relative;
     padding: 20px;
-    transform: translateX(300px);
+    transform: translateX(-30px); /*moves text left*/
 }
 
-#demo_product_right , #demo_product_left{
+#demo_product_right, #demo_product_left{
     background-color: #FFFDFB;
     padding: 60px;
 }
 
-#footer {
-    background-color: #14213d;
-    color: white;
-    text-align: center;
-    height: 200px;
 
-    display: flex;
-    justify-content: center; 
+#text_wrapper_right, #text_wrapper_left{
+    background-color: #e5e5e5;
     align-items: center;
+    justify-content: center;
+    resize: vertical;
+    text-align: center;
+    max-width: 30%;
+    max-height:300px;
+    margin: auto;
+    border-radius:20px;
+    border: 1px solid #14213d; 
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+#text_wrapper_left_logo{
+    align-items: center;
+    justify-content: center;
+    resize: vertical;
+    text-align: center;
+    max-width: 30%;
+    max-height:300px;
+    margin: auto;
     border-radius:20px;
 }
+#text_wrapper_right a, #text_wrapper_left a {
+    text-decoration: none;
+    color: black;
+}
 
-body {
-    scroll-behavior: smooth;
+#text_wrapper_right:hover, #text_wrapper_left:hover {
+    background-color: rgba(252, 163, 17, 0.5);
+    border-color: green;
+    cursor: pointer;
+}
+
+
+#demo_logo_left {    
+    background: url("https://youthfulyam.github.io/images/apex_automation_logo_full.png") no-repeat;
+    display: flex;
+    background-color: #FFFDFB;
+    background-position: left;
+    background-size: contain;
+    position: relative;
+    padding: 90px;
+    transform: translateX(250px);
+    height:250px;
+}
+  
+#demo_logo_left #text_wrapper_left_logo {
+    flex: 1;
+    position: relative;
+    padding: 20px;
+    font-size:2.5em;
 }
 
 /* Style for the scroll button */
@@ -301,20 +348,29 @@ body {
     /* Move text to right of logo (button) */
     margin-right:15px;
 }
-
-
 #go-button a {
-    text-decoration: none; /* Remove the hyperlink underscore */
+    text-decoration: none; 
     color: white;
     text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;/* Adds black border around text */
 }
 #go-button:hover {
     background-color: rgba(255,255,255,1);
 }
-
+/* Footer */
+#footer {
+    background-color: #14213d;
+    color: white;
+    text-align: center;
+    height: 200px;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    border-radius:20px;
+}
   
-/* Responsive for Mobile view w768 and below */
+/* Responsive */
 @media screen and (max-width: 768px) {
+    /* Section */
     section {
         flex-direction: column;
         text-align: left;
@@ -332,14 +388,13 @@ body {
     }
   
     .form-section {
-    margin-right: 10px;
-    padding: 10px;
-      height:auto;
-      margin:0;
-      width:95%;
-      
+        margin-right: 10px;
+        padding: 10px;
+        height:auto;
+        margin:0;
+        width:95%;
     }
-  
+    /* Form */
     .form_wrapper {
         width: 90%;
         padding: 20px;
@@ -383,7 +438,7 @@ body {
         width: 220px; 
         margin: 0;
     }
-  
+    /*3D viewer */
     article{
         
         margin:0;
@@ -393,66 +448,27 @@ body {
         width: 100%;
         height: auto;
     }
-  #demo_product_left{
-    margin-top:20px;
-  }
+    /*Demo Products*/
+    #demo_product_left{
+        margin-top:20px;
+    }
+    #demo_logo_left{
+        margin-top:20px;
+    }
+    #text_wrapper_left, #text_wrapper_right, #text_wrapper_left_logo{
+        max-width:300px;
+    }
   
-        #demo_product_left,
-        #demo_product_right {
+    #demo_product_left, #demo_product_right, #demo_logo_left {
         background-position: center; 
         padding: 30px; 
     }
   
-    #demo_product_left #text_wrapper_left, #demo_product_right #text_wrapper_right {
+    #demo_product_left #text_wrapper_left, #demo_product_right #text_wrapper_right, #demo_logo_left #text_wrapper_left_logo {
         transform: none;
     }
 
-    #demo_product_left, #demo_product_right {
-        transform: translateX(0);
-        padding:0;
-        margin-bottom:10px;
-    }
-    #demo_product_right{
-        margin-top:200px;
-      margin-bottom:240px;
-    }
-
-
-    #demo_product_right h1{
-        margin-top:500px;
-        margin:0;
-        padding:0;
-    }
-    #demo_product_left h1{
-        margin-top:500px;
-        margin:0;
-        padding:5px;
-    }
-    #demo_product_right #text_wrapper_right, #demo_product_left #text_wrapper_left {
-        transform: translateY(230px);
-    }
-
-}
-/* Responsive: limbo between mobile view and fullscreen */
-@media screen and (max-width: 1200px) {
-    #demo_product_left{
-        margin-top:20px;
-    }
-  
-        #demo_product_left,
-        #demo_product_right {
-        background-position: center; 
-        padding: 30px;
-        width:auto;
-        height:300px;
-
-    }
-  
-    #demo_product_left #text_wrapper_left, #demo_product_right #text_wrapper_right {
-        transform: none;
-    }
-
-    #demo_product_left, #demo_product_right {
+    #demo_product_left, #demo_product_right, #demo_logo_left {
         transform: translateX(0);
         padding:0;
         margin-bottom:10px;
@@ -473,7 +489,62 @@ body {
         margin:0;
         padding:5px;
     }
-    #demo_product_right #text_wrapper_right, #demo_product_left #text_wrapper_left {
-        transform: translateY(280px);
+      #demo_logo_left h1{
+        margin-top:500px;
+        margin:0;
+        padding:5px;
+    }
+    #demo_product_right #text_wrapper_right, #demo_product_left #text_wrapper_left, #demo_logo_left #text_wrapper_left_logo {
+        transform: translateY(230px);
+    }
+
+}
+/* Responsive: limbo between mobile view and fullscreen */
+@media screen and (max-width: 1200px) {
+    #demo_product_left{
+        margin-top:20px;
+    }
+    #demo_logo_left{
+        margin-top:400px;
+    }
+    #demo_product_left, #demo_product_right, #demo_logo_left {
+        background-position: center; 
+        padding: 30px;
+        width:auto;
+        height:300px;
+    }
+  
+    #demo_product_left #text_wrapper_left, #demo_product_right #text_wrapper_right, #demo_logoleft #text_wrapper_left_logo {
+        transform: none;
+    }
+
+    #demo_product_left, #demo_product_right, #demo_logo_left {
+        transform: translateX(0);
+        padding:0;
+        margin-bottom:350px;
+    }
+    #demo_product_right{
+        margin-top:400px;
+        margin-bottom:240px;
+    }
+
+
+    #demo_product_right h1{
+        margin-top:500px;
+        margin:0;
+        padding:0;
+    }
+    #demo_product_left h1{
+        margin-top:500px;
+        margin:0;
+        padding:5px;
+    }
+      #demo_logo_left h1{
+        margin-top:500px;
+        margin:0;
+        padding:5px;
+    }
+    #demo_product_right #text_wrapper_right, #demo_product_left #text_wrapper_left, #demo_logo_left #text_wrapper_left_logo {
+        transform: translateY(345px);
     }
 }
