@@ -166,7 +166,7 @@ main {
     margin-bottom: 10px;
 }
 
-.product button {
+.product .button {
     padding: 10px 20px;
     background-color: #ff8c00;
     border: none;
@@ -176,7 +176,7 @@ main {
     transition: background 0.3s ease;
 }
 
-.product button:hover {
+.product .button:hover {
     background-color: #ff6347;
 }
 
