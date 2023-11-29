@@ -115,7 +115,7 @@ main {
 
 .dropdown {
     position: relative;
-    display: block;
+    display: inline;
 }
 
 .dropdown-content {
