@@ -105,7 +105,7 @@ main {
 
 /* TESTING DROPDOWN BOX */
 
-.navbar li:hover .dropdown-content {
+.dropbtn:hover .dropdown-content {
     background-color: #ff6347;
     color: white;
     padding: 16px;
