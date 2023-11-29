@@ -4,7 +4,6 @@ body {
     padding: 0;
     background-color: #f4f4f4; /* Light Gray background color */
     background: linear-gradient(to bottom, #f4f4f4, #ddd) fixed; /* Gradient for added depth */
-    overflow-x: hidden; /* Prevent horizontal scroll on small screens */
 }
 
 header {
