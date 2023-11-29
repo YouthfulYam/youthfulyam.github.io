@@ -134,9 +134,7 @@ main {
 #slide2:checked ~ .Slides:nth-child(4),
 #slide3:checked ~ .Slides:nth-child(6) {
     display: block;
-    position: absolute;
-    margin: 20px auto;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
     display: flex;
     align-items: center;
 }
