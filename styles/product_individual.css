@@ -186,15 +186,12 @@ article:hover {
 }
 
 
-#footer {
-
-    background-color: #14213d;
-    color: white;
+footer {
+    background: linear-gradient(to right, #333, rgb(30, 144, 255));
+    color: #fff;
     text-align: center;
-    height: 300px;
-  
-    display: flex;
-    justify-content: center; 
-    align-items: center;
-    border-radius:20px;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
