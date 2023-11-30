@@ -18,6 +18,11 @@ header {
     transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 
+a:link {text-decoration: none;}
+a:visited {text-decoration: none;}
+a:hover {text-decoration: none;}
+a:active {text-decoration: none;}
+
 header:hover {
     background: linear-gradient(to right, #1e90ff, #333); 
 }
@@ -143,6 +148,7 @@ main {
     color: #fff;
     cursor: pointer;
     transition: background 0.3s ease;
+    text-decoration: none;
 }
 
 .product .button:hover {
