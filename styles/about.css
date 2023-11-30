@@ -8,18 +8,37 @@ button {	font-size: 1.2em;
 			border-style: solid;
 			border-radius: 0px;
 			background-color: #f4f4f4;
-			
-			
+			font-family: "amandine", sans-serif;
+			font-weight: 700;
+			font-style: normal;
 			}
 button:focus {background-color: #ffffff;
 }
 
 .member-container {align: left;}
 
+table { font-family: "adobe-garamond-pro", serif;
+	font-weight: 400;
+	font-style: normal;	
+}
+
 img { float: right;
 	margin-left: 20px; }
 	
-h2 { border: 0px;}
+p { font-family: "adobe-garamond-pro", serif;
+	font-weight: 400;
+	font-style: normal;	
+}
+h1 { font-family: "amandine", sans-serif;
+	font-weight: 700;
+	font-style: normal;
+	font-size: 3em;
+}
+h2 { border: 0px;
+	font-family: "amandine", sans-serif;
+	font-weight: 700;
+	font-style: normal;
+}
 hr { border: 1px solid black;}
 
 /* DROPDOWN BOX */
@@ -46,6 +65,9 @@ hr { border: 1px solid black;}
     background-color: #333;
     min-width: 140px;
     z-index: 1;
+	font-family: "adobe-garamond-pro", serif;
+	font-weight: 400;
+	font-style: normal;	
 }
 
 .dropdown-content a {
