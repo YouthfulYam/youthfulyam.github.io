@@ -21,3 +21,49 @@ img { float: right;
 	
 h2 { border: 0px;}
 hr { border: 1px solid black;}
+
+/* DROPDOWN BOX */
+
+.dropbtn {
+    background: none;
+    border-radius: 12px;
+    font-size: 16px;
+    border: none;
+}
+
+.dropdown {
+    background: none;
+    border: none;
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    color: white;
+    border-radius: 12px;
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 140px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 12px 12px;
+    border-radius: 12px;
+    color: white;
+    text-decoration: none;
+}
+
+.dropdown-content a:hover {
+    background-color: #333;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #333;
+}
