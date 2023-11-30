@@ -106,6 +106,7 @@ nav a:hover {
 }
 /* Slideshow styling */
 .Slideshow {
+    background-image: url(../images/robo1.jpg);
     max-width: 100%;
     position: relative;
     margin: auto;
@@ -113,6 +114,25 @@ nav a:hover {
     border-radius: 10px;
 }
 
+.centered {
+    position: absolute;
+    top: 65%;
+    left: 29%;
+    transform: translate(-50%, -50%);
+    font-family:'Times New Roman', Times, serif;
+    font-size: 85px;
+    color: rgb(255, 255, 255);
+}  
+
+.tag {
+    position: absolute;
+    top: 75%;
+    left: 29%;
+    transform: translate(-50%, -50%);
+    font-family:'Times New Roman', Times, serif;
+    font-size: 65px;
+    color: rgb(220, 220, 220);
+}  
 .Slides {
     display: none;
     width: 100%;
@@ -123,6 +143,7 @@ nav a:hover {
 }
 
 .Slides img {
+   
     width: 100%;
     height: auto;
     border-radius: 10px;
@@ -418,7 +439,7 @@ footer {
     color: #fff;
     text-align: center;
     padding: 10px;
-    position: fixed;
+    position: relative;
     bottom: 0;
     width: 100%;
 }
