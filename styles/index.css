@@ -515,11 +515,6 @@ iframe {
 	width: 225;
 }
 
-.marmo-thumbnail img:hover {
-	background-color: rgba(255, 255, 255, 0.2);
-	border-color: green;
-	cursor: pointer;
-}
 
 /* Responsive 3D Viewer */
 @media screen and (max-width: 768px) {
