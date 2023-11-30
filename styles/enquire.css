@@ -359,7 +359,7 @@ iframe {
 
 /* Style for the scroll button */
 #go-button {
-	top: 35px;
+	top: 100px;
 	left: 10px;
 	padding: 10px 20px;
 	backdrop-filter: blur(4px);
