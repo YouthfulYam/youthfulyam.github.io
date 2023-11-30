@@ -18,3 +18,6 @@ button:focus {background-color: #ffffff;
 
 img { float: right;
 	margin-left: 20px; }
+	
+h2 { border: 0px;}
+hr { border: 1px solid black;}
