@@ -223,15 +223,6 @@ footer {
     width: 100%;
 }
 
-li:before {
-    content: "\2022"; /* Bullet character */
-    position: relative;
-    left: 0;
-    color: #ff8c00; /* Bullet color */
-    font-size: 20px;
-    line-height: 20px;
-}
-
 .product .button {
     height: 35px;
     margin-top: 15px;
