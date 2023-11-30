@@ -17,7 +17,10 @@ header {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: background 0.3s ease, box-shadow 0.3s ease;
 }
-
+a:link {text-decoration: none;}
+a:visited {text-decoration: none;}
+a:hover {text-decoration: none;}
+a:active {text-decoration: none;}
 header:hover {
     background: linear-gradient(to right, #1e90ff, #333); 
 }
