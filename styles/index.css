@@ -178,6 +178,7 @@ section {
     color: #fff;
     text-align: center;
     padding: 40px;
+    border: solid black 5px;
     border-radius: 10px;
 }
 
@@ -238,6 +239,10 @@ table {
 table, th, td {
     border: 1px solid #333;
     border-radius: 10px;
+}
+
+.tbody{
+    background-color: #00e5ff;
 }
 
 /* ... (previous styles) */
@@ -375,4 +380,16 @@ iframe {
 		width: 100%;
 		height: auto;
 	}
+}
+
+@media only screen and (max-width: 600px) {
+    .centered {
+        margin-top: -252px;
+        margin-left: 26px;
+    }
+
+    .tag {
+        margin-top: -262px;
+        margin-left: 98px;
+    }
 }
