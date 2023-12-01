@@ -209,42 +209,6 @@ fieldset label i {
 	background-color: #ff6347;
 }
 
-article {
-	/* 3D viewer marmoset */
-
-	text-align: center;
-
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	background-color: #14213D;
-	color: white;
-	padding: 20px;
-	border-radius: 20px;
-	margin: 20px;
-}
-
-iframe {
-	min-height: 650px;
-}
-
-.marmo-thumbnail {
-	margin: 10px;
-}
-
-.marmo-thumbnail img {
-	object-fit: contain;
-	height: auto;
-	width: 225px;
-}
-
-.marmo-thumbnail img:hover {
-	background-color: rgba(255, 255, 255, 0.2);
-	border-color: green;
-	cursor: pointer;
-}
-
 
 .hr-footer {
 	margin-top: 50px;
@@ -483,15 +447,10 @@ iframe {
 	}
 
 	article {
-
 		margin: 0;
 		margin-top: 20px;
 	}
 
-	iframe {
-		width: 100%;
-		height: auto;
-	}
 
 	#demo_product_left {
 		margin-top: 20px;
