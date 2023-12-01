@@ -306,3 +306,263 @@ footer {
 .dropdown:hover .dropbtn {
     background-color: #333;
 }
+
+
+
+
+/* All elements related to image grid */
+.grid-display {
+	background-color: #e5e5e5;
+	padding: 30px;
+}
+
+.grid-container {
+	display: grid;
+	grid-template-areas:
+		'myArea myArea smallBox . .'
+		'bigBox bigBox bigBox . .';
+	grid-template-columns: repeat(5, 1fr);
+	grid-gap: 10px;
+	border-radius: 20px;
+	border: 1px solid black;
+	padding: 5px;
+	background-color: #14213d;
+	width: 100%;
+    margin-top:20px;
+}
+
+.grid-container>div {
+	background-color: #FFF3EB;
+	text-align: center;
+	padding: 20px 0;
+	font-size: 30px;
+	border-radius: 20px;
+}
+
+.product-description p {
+	color: white;
+}
+
+.item1 {
+	grid-area: myArea;
+	width: 100%;
+	grid-column: 1 / span 1;
+	background-image: url("../images/wave_bg_compressed.jpg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-position-y: 9%;
+	position: relative;
+
+}
+.item3.grid-item {
+	background-color: #FCA311;
+	font-size: 1.25em;
+	color: white;
+}
+
+.item2 {
+	grid-area: smallBox;
+	width: 100%;
+	grid-column: 2 / span 3;
+	position: relative;
+	overflow: hidden;
+}
+
+.item2.grid-item {
+	font-size: 1.25em;
+}
+
+.item2.grid-item::before {
+	content: '';
+	position: absolute;
+	right: -15%;
+	top: 80%;
+	width: 400px;
+	height: 200px;
+	background-color: #FCA311;
+	transform: rotate(140deg);
+}
+
+.item1 {
+	grid-area: myArea;
+	width: 100%;
+	grid-column: 1 / span 1;
+}
+.item1.grid-item a {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+}
+
+
+.item1 p{
+  font-size:0.7em;
+  width:80%;
+  color:#14213D;
+  
+}
+
+.item2 {
+	grid-area: smallBox;
+	width: 100%;
+	grid-column: 2 / span 3;
+	position: relative;
+	overflow: hidden;
+}
+
+.item2.grid-item {
+	font-size: 1.25em;
+}
+
+.item2.grid-item::before {
+	content: '';
+	position: absolute;
+	right: -15%;
+	top: 80%;
+	width: 400px;
+	height: 200px;
+	background-color: #FCA311;
+	transform: rotate(140deg);
+}
+
+.item2.grid-item::after {
+	content: '';
+	position: absolute;
+	right: 90%;
+	top: -50%;
+	width: 400px;
+	height: 200px;
+	background-color: #FCA311;
+	transform: rotate(45deg);
+}
+
+.item2 p {
+	width: 80%;
+}
+
+.bxs-quote-right {
+position: relative;
+  left: 200px;
+}
+.bxs-quote-left {
+position: relative;
+  left: -230px;
+}
+
+#quoteIcon{
+  font-size:3em;
+  color:rgba(0,0,0,0.1)
+}
+
+.item3 {
+	grid-area: bigBox;
+	width: 95%;
+	grid-column: 5 / span 2;
+	position: relative;
+	overflow: hidden;
+}
+
+.item4 {
+	grid-column: span 2;
+	width: 100%;
+}
+
+#desc-4 {
+	color: black;
+	font-size: 1em;
+}
+
+.item4.grid-item {
+	background-color: white;
+	font-size: 1.25em;
+}
+
+.item4 a {
+	text-decoration: none;
+}
+
+.item5 {
+	grid-column: 1 / span 4;
+	/* Start from the first column and span 4 columns */
+	width: 100%;
+	height: 500px;
+	background-image: url(https://i.imgur.com/vwqUyIL.png);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-position-y: 93%;
+	position: relative;
+	overflow: hidden;
+}
+
+.item3::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 2) 410%);
+}
+
+
+.grid-container img {
+	border-radius: 20px;
+	max-width: 100%;
+	height: auto;
+}
+
+.grid-item {
+	border: 1px solid #ccc;
+	border-radius: 20px;
+	padding: 20px;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.product-description {
+	font-size: 16px;
+	color: white;
+	margin-top: 10px;
+	text-align: center;
+}
+
+/* Responsiveness */
+@media screen and (max-width: 815px) {
+  .grid-container {
+    grid-template-areas:
+      'myArea myArea myArea myArea myArea'
+      'bigBox bigBox bigBox bigBox bigBox';
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .item1 {
+    grid-column: span 5;
+  }
+
+  .item2 {
+    grid-column: span 5; 
+    position: static;
+    overflow: visible;
+  }
+
+  .item2.grid-item::before,
+  .item2.grid-item::after {
+    display: none; /* Hide bg shapes in mobile view */
+  }
+
+  .item3,
+  .item4,
+  .item5 {
+    grid-column: span 5;
+  }
+
+  .item5 {
+    height: 300px;
+    background-position-y: 50%;
+  }
+}
