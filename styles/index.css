@@ -304,7 +304,7 @@ article {
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-article:hover {
+article.news-section:hover {
     background: linear-gradient(to bottom, #fff, #f0f0f0);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -365,6 +365,11 @@ iframe {
 	object-fit: contain;
 	height: auto;
 	width: 225;
+}
+.marmo-thumbnail img:hover {
+	background-color: rgba(255, 255, 255, 0.2);
+	border-color: green;
+	cursor: pointer;
 }
 
 
