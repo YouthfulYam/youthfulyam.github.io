@@ -353,7 +353,8 @@ footer {
 	background-repeat: no-repeat;
 	background-position-y: 9%;
 	position: relative;
-
+}
+.item p{
     /* Box 1 Title Font */
 	font-family: "amandine", sans-serif;
 	font-weight: 700;

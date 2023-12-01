@@ -1,3 +1,4 @@
+/* Enquire form CSS by Nicolas Rivera - Includes responsiveness */
 main {
 	height: auto;
 }
@@ -235,7 +236,7 @@ iframe {
 .marmo-thumbnail img {
 	object-fit: contain;
 	height: auto;
-	width: 225;
+	width: 225px;
 }
 
 .marmo-thumbnail img:hover {
