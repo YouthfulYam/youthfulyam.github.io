@@ -313,7 +313,7 @@ footer {
 /* All elements related to image grid */
 .grid-display {
 	background-color: #e5e5e5;
-	padding: 30px;
+	padding: 5px;
 }
 
 .grid-container {
@@ -328,7 +328,7 @@ footer {
 	padding: 5px;
 	background-color: #14213d;
 	width: 100%;
-    margin-top:20px;
+    margin-top:10px;
 }
 
 .grid-container>div {
@@ -354,7 +354,18 @@ footer {
 	background-position-y: 9%;
 	position: relative;
 
+    /* Box 1 Title Font */
+	font-family: "amandine", sans-serif;
+	font-weight: 700;
+	font-style: normal;
+	font-size: 3em;
 }
+
+.item1.grid-item:hover {
+	background-color: rgba(255, 255, 255, 0.9);
+	cursor: pointer;
+}
+
 .item3.grid-item {
 	background-color: #FCA311;
 	font-size: 1.25em;
@@ -480,6 +491,11 @@ position: relative;
 
 .item4 a {
 	text-decoration: none;
+}
+
+.item4.grid-item:hover {
+	background-color: rgba(255, 255, 255, 0.9);
+	cursor: pointer;
 }
 
 .item5 {
