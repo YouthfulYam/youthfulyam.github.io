@@ -58,8 +58,8 @@ section .intro-paragraph {
 
 .form-section {
 	/*Form background image*/
-	/*background: url("../images/enquiryForm_bg_compressed.png") no-repeat;*/
-	background: url("https://i.imgur.com/vwqUyIL.png") no-repeat;
+	background: url("../images/enquiryForm_bg_compressed.png") no-repeat;
+	/* background: url("https://i.imgur.com/vwqUyIL.png") no-repeat; Online view backup */
 	flex: 1;
 	background-position: center;
 	background-size: 100% 100%;
@@ -216,7 +216,7 @@ fieldset label i {
 
 /* Section for demoing products or having text on left/right with image adjacent */
 #demo_product_left {
-	background: url("https://youthfulyam.github.io/images/LUBA1.jpg") no-repeat;
+	background: url("../images/LUBA1.jpg") no-repeat;
 	display: flex;
 	background-position: left;
 	background-size: contain;
@@ -235,7 +235,7 @@ fieldset label i {
 }
 
 #demo_product_right {
-	background: url("https://youthfulyam.github.io/images/GT_FreedomEdit.png") no-repeat;
+	background: url("../images/GT_FreedomEdit.png") no-repeat;
 	display: flex;
 	background-position: right;
 	background-size: contain;
@@ -303,7 +303,7 @@ fieldset label i {
 
 
 #demo_logo_left {
-	background: url("https://youthfulyam.github.io/images/apex_automation_logo_full.png") no-repeat;
+	background: url("../images/apex_automation_logo_full.png") no-repeat;
 	display: flex;
 	background-color: #FFFDFB;
 	background-position: left;
