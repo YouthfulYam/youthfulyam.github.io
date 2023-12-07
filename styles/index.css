@@ -173,13 +173,16 @@ section {
 }
 
 /* Call-to-action styling */
-.cta {
-    background-color: #1e90ff;
-    color: #fff;
-    text-align: center;
-    padding: 40px;
-    border: solid black 5px;
+section.cta {
+    margin-bottom: 20px;
+    padding: 15px;
     border-radius: 10px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta:hover {
+    background: linear-gradient(to bottom, #fff, #f0f0f0);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .cta h2 {
