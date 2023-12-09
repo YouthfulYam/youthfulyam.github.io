@@ -23,7 +23,8 @@ table { font-family: "adobe-garamond-pro", serif;
 }
 
 img { float: right;
-	margin-left: 20px; }
+	margin-left: 20px;
+    	margin-bottom: 20px;}
 	
 p { font-family: "adobe-garamond-pro", serif;
 	font-weight: 400;
