@@ -150,26 +150,84 @@ main {
 
 /* ... (remaining styles) */
 
-
 section {
     margin-bottom: 20px;
 }
 
 /* Testimonials styling */
-.testimonials {
-    background-color: #f9f9f9;
-    padding: 30px;
+section.testimonials {
+    margin-bottom: 20px;
+    padding: 15px;
     border-radius: 10px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonials:hover {
+    background: linear-gradient(to bottom, #fff, #f0f0f0);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.testimonials h2 {
     margin-bottom: 20px;
 }
 
-.testimonial {
-    margin-top: 20px;
+.testimonials p {
+    margin-bottom: 30px;
+    font-size: 18px;
 }
 
 .customer-name {
     font-style: italic;
-    color: #555;
+}
+
+/* Youtube styling */
+section.youtube {
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.youtube:hover {
+    background: linear-gradient(to bottom, #fff, #f0f0f0);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.youtube h2 {
+    margin-bottom: 20px;
+}
+
+.youtube p {
+    margin-bottom: 30px;
+    font-size: 18px;
+}
+
+.youtube-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #ff8c00;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.youtube-button:hover {
+    background-color: #ff6347;
+}
+
+/* ... (previous styles) */
+
+/* List item styling */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 10px;
 }
 
 /* Call-to-action styling */
@@ -208,23 +266,7 @@ section.cta {
     background-color: #ff6347;
 }
 
-
-/* ... (previous styles) */
-
-/* List item styling */
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-li {
-    position: relative;
-    padding-left: 25px;
-    margin-bottom: 10px;
-}
-
 /* ... (remaining styles) */
-
 
 img {
     max-width: 100%;
