@@ -147,11 +147,113 @@
                     <p><label for="comments">Comments:<span class="asterisk">&#42;</span></label></p>
                     <p><textarea id="comments" name="comments" placeholder="Please describe what you want to find out" required></textarea></p>
                 </fieldset>
+
+                <fieldset class="purchase-product">
+                    <legend>Purchase a product</legend>
+                                        
+                        <fieldset>
+                        <legend>Product Categories</legend>
+
+                        <!-- Product Tabs -->
+                        <div class="product-tabs">
+                            <!-- Vacuum Tab -->
+                            <input type="radio" name="product-category" id="vacuum-tab" checked>
+                            <label class="product-tab" for="vacuum-tab">Vacuums</label>
+
+                            <!-- Pool Cleaner Tab -->
+                            <input type="radio" name="product-category" id="pool-cleaner-tab">
+                            <label class="product-tab" for="pool-cleaner-tab">Pool Cleaner</label>
+
+                            <!-- Lawn Mower Tab -->
+                            <input type="radio" name="product-category" id="lawn-mower-tab">
+                            <label class="product-tab" for="lawn-mower-tab">Lawn Mowers</label>
+
+                            <!-- Products for Vacuum Tab -->
+                            <div class="tab-content" id="vacuum-products">
+                            <label>
+                                <input type="radio" name="product" value="vacuum1"> Ecovacs Deebot t20
+                                <p class="product-price">$1,799</p>
+                            </label>
+                            <label>
+                                <input type="radio" name="product" value="vacuum2"> Roborock s8
+                                <p class="product-price">$1,699</p>
+                            </label>
+                            </div>
+
+                            <!-- Products for Lawn Mower Tab -->
+                            <div class="tab-content" id="lawn-mower-products">
+                            <label>
+                                <input type="radio" name="product" value="lawn-mower1"> LUBA AWD 5000
+                                <p class="product-price">$4,399</p>
+                            </label>
+                            <label>
+                                <input type="radio" name="product" value="lawn-mower2"> Segway Navimow H800A-VF 800m2
+                                <p class="product-price">$2,899</p>
+                            </label>
+                            </div>
+
+                            <!-- Products for Pool Cleaner Tab -->
+                            <div class="tab-content" id="pool-cleaner-products">
+                            <label>
+                                <input type="radio" name="product" value="pool-cleaner1"> Madimack GT Freedom i80
+                                <p class="product-price">$2,798</p>
+                            </label>
+                            <label>
+                                <input type="radio" name="product" value="pool-cleaner2"> Zodiac FX18 Robotic Pool Cleaner
+                                <p class="product-price">$1,199</p>
+                            </label>
+                            </div>
+
+                        </div>
+                        </fieldset>       
+            
+                    <br>
+            
+                    <label for="quantity">Quantity:</label>
+                    <input type="number" id="quantity" name="quantity" min="1" required>
+            
+                    <br>
+            
+                    <label for="cardType">Credit card type:</label>
+                    <select id="cardType" name="cardType" required>
+                        <option value="" disabled selected>Select Card Type</option>
+                        <option value="visa">Visa</option>
+                        <option value="mastercard">Mastercard</option>
+                        <option value="amex">American Express</option>
+                    </select>
+            
+                    <br>
+            
+                    <label for="cardName">Name on credit card:</label>
+                    <input type="text" id="cardName" name="cardName" required>
+            
+                    <br>
+            
+                    <label for="cardNumber">Credit card number:</label>
+                    <input type="text" id="cardNumber" name="cardNumber" required>
+            
+                    <br>
+            
+                    <label for="expiryDate">Expiry date:</label>
+                    <input type="text" id="expiryDate" name="expiryDate" pattern="\d{2}-\d{2}" placeholder="mm-yy" required>
+            
+                    <br>
+            
+                    <label for="cvv">CRV:</label>
+                    <input type="text" id="cvv" name="cvv" pattern="\d{3}" required>
+
+                    <br>
+                    <fieldset>
+                        <p>Total amount: </p>
+                    </fieldset>
+            
+                </fieldset>
                 
                 <div>
                     <button type="submit" class="submit-button">Submit</button>     
                 </div>
         </form>
+      
     </div>
   </section>
   
@@ -178,6 +280,7 @@
                     <h1> Your Path to Effortless Cleanliness</h1>
             </div>
     </section>
+  
     <hr>
     <div id="footer">
         <p>

@@ -65,7 +65,8 @@ section .intro-paragraph {
 	background-size: 100% 100%;
 	position: relative;
 	background-size: cover;
-	height: 450px;
+  /*TMP changed to 1450px*/
+	height: 1450px;
 	width: 54%;
 	border-radius: 20px;
 	padding: 250px;
@@ -367,6 +368,85 @@ fieldset label i {
 	padding: 10px;
 	bottom: 0;
 	width: 100%;
+}
+
+.product-price {
+    margin-left: 10px;
+    font-weight: bold;
+}
+.purchase-product label {
+    display: flex;
+    align-items: center;
+}
+/* Style tabs */
+.product-tabs {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.product-tabs .product-tab {
+  padding: 10px;
+  background-color: #fca311;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  flex-grow: 1;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.product-tabs .product-tab:last-child {
+  margin-right: 0;
+}
+
+.product-tabs .product-tab:hover {
+  background-color: #ff6347;
+}
+
+/* Style tab content */
+.tab-content {
+  display: none;
+  width: 100%;
+}
+
+/* Display selected tab content */
+#vacuum-tab:checked ~ #vacuum-products,
+#pool-cleaner-tab:checked ~ #pool-cleaner-products,
+#lawn-mower-tab:checked ~ #lawn-mower-products {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Style individual product labels */
+.tab-content label {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 5px;
+  width: calc(33.33% - 20px);
+}
+
+/* Optional: Add spacing between product labels */
+.tab-content label + label {
+  margin-left: 10px;
+}
+
+/* Hide radio buttons for product categories */
+.product-tabs input[type="radio"][name="product-category"] {
+  display: none;
+}
+
+/* Display radio buttons for individual products */
+.tab-content input[type="radio"][name="product"] {
+  display: none; /* Hide all radio buttons by default */
+}
+
+/* Display selected radio buttons for individual products */
+#vacuum-tab:checked ~ #vacuum-products input[type="radio"],
+#pool-cleaner-tab:checked ~ #pool-cleaner-products input[type="radio"],
+#lawn-mower-tab:checked ~ #lawn-mower-products input[type="radio"] {
+  display: inline-block; /* Display only the radio buttons for the selected category */
 }
 
 /* Responsive */
