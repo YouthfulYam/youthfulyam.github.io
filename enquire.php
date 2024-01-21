@@ -265,6 +265,9 @@ if($conn->connect_error) {
                 </div>
         </form>
 ?>
+<?php
+    $conn->close();
+?>
       
     </div>
   </section>
