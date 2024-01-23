@@ -1,11 +1,3 @@
-<?php
-include('setting.php');
-$conn=new mysqli($host, $user, $pwd, $sql_db);
-if($conn->connect_error) {
-    die("Connection failed: ".$conn->connect_error);
-}
-?>
-
 <!DOCTYPE html>
 <html lang="en">
     
@@ -47,9 +39,6 @@ if($conn->connect_error) {
     </aside>
 
 
-
-
-<?php
   <section class="form-section"  aria-label="Product Enquiry">
     <div class="form_wrapper">
         <form method="post" action="process_order.php" id="enquiryForm" novalidate>
@@ -246,10 +235,6 @@ if($conn->connect_error) {
                     <button type="submit" class="submit-button">Submit</button>     
                 </div>
         </form>
-?>
-<?php
-    $conn->close();
-?>
       
     </div>
   </section>
@@ -277,13 +262,10 @@ if($conn->connect_error) {
                     <h1> Your Path to Effortless Cleanliness</h1>
             </div>
     </section>
-  
-    <hr>
-    <div id="footer">
-        <p>
-            2023 &#169;Apex Automation by HTML Heroes!
-        </p>
-    </div>
+
+    <?php
+        include('footer.inc');
+    ?>
 
 </main>
 </body>
