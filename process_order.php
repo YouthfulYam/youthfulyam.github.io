@@ -23,7 +23,8 @@ if (!$conn) {
 
 // Check if the form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    echo "Form submitted";
+    
+    //echo "Form submitted";
 
     // Assign values from POST to variables
     $customer_name = htmlspecialchars(trim($_POST["cardName"]));
@@ -33,8 +34,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $card_number = htmlspecialchars(trim($_POST["cardNumber"]));
     $expiration_date = date("m/y", strtotime($_POST["expiryDate"]));
     $cvv = htmlspecialchars(trim($_POST["cvv"]));
-    $order_cost = 0.0; // tmp atm, need to calc later
     $order_status = 'PENDING';
+    //$order_cost = 0.0; // tmp atm, need to calc later
+    //Calculating total cost:
+    // Calculate total cost server-side based on the selected product and quantity
+    $product_prices = 
+    ["Ecovacs_Deebot_t20" => 1799.00, "Roborock_s8" => 1699.00, "LUBA_AWD_5000" => 4399.00, "Segway_Navimov_H800A-VF_800m2" => 2899.00, "Madimack_GT_Freedom_i80" => 2798.00, "Zodiac_FX18_Robotic_Pool_Cleaner" => 1199.00];
+    
+    // Check if the selected product exists in the array
+    if (array_key_exists($product_name, $product_prices)) 
+    {
+        $order_cost = $product_prices[$product_name] * $product_quantity;
+    } else 
+    {
+        $order_cost = 0.00; // Default to 0 if the product is not found (you may handle this differently based on your requirements)
+        echo "Debug: Product Name not found - $product_name";
+    }
+        echo "Debug: Order Cost - $order_cost";
+    
 
 
     // Set up the SQL query for INSERT
@@ -51,8 +68,8 @@ if (!$insertResult) {
         echo "<p class=\"wrong\">Something is wrong with the query: ", $insertQuery, "</p>";
         // This error message should not be displayed in a production script
     } else {
-        // Display a success message
-        echo "<p class=\"ok\">Order placed successfully!</p>";
+        // Display message if successful
+        //echo "<p class=\"ok\">Order placed successfully!</p>";
     }
 }
 
