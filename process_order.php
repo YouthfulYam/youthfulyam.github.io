@@ -35,9 +35,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $expiration_date = date("m/y", strtotime($_POST["expiryDate"]));
     $cvv = htmlspecialchars(trim($_POST["cvv"]));
     $order_status = 'PENDING';
-    //$order_cost = 0.0; // tmp atm, need to calc later
+
     //Calculating total cost:
-    // Calculate total cost server-side based on the selected product and quantity
     $product_prices = 
     ["Ecovacs_Deebot_t20" => 1799.00, "Roborock_s8" => 1699.00, "LUBA_AWD_5000" => 4399.00, "Segway_Navimov_H800A-VF_800m2" => 2899.00, "Madimack_GT_Freedom_i80" => 2798.00, "Zodiac_FX18_Robotic_Pool_Cleaner" => 1199.00];
     
@@ -47,7 +46,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $order_cost = $product_prices[$product_name] * $product_quantity;
     } else 
     {
-        $order_cost = 0.00; // Default to 0 if the product is not found (you may handle this differently based on your requirements)
+        $order_cost = 0.00; // Default to 0
         echo "Debug: Product Name not found - $product_name";
     }
         echo "Debug: Order Cost - $order_cost";
@@ -56,7 +55,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Set up the SQL query for INSERT
     $insertQuery = "INSERT INTO orders (customer_name, product_name, product_quantity, payment_method, card_number, expiration_date, cvv, order_cost, order_status) 
-             VALUES ('$customer_name', '$product_name', $product_quantity, '$payment_method', '$card_number', '$expiration_date', '$cvv', $order_cost, '$order_status')";
+        VALUES ('$customer_name', '$product_name', $product_quantity, '$payment_method', '$card_number', '$expiration_date', '$cvv', $order_cost, '$order_status')";
 
 
     // Execute the query for insertion
@@ -66,19 +65,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 if (!$insertResult) {
         echo "Error: " . mysqli_error($conn);
         echo "<p class=\"wrong\">Something is wrong with the query: ", $insertQuery, "</p>";
-        // This error message should not be displayed in a production script
+
     } else {
-        // Display message if successful
+        // If successful
         //echo "<p class=\"ok\">Order placed successfully!</p>";
     }
 }
 
-// Set up the SQL command to query data from the 'orders' table
-//$query = "SELECT order_id, customer_name, product_name, order_cost FROM orders ORDER BY order_time DESC";
+// Grab data from the 'orders' table
 $query = "SELECT order_id, customer_name, product_name, product_quantity, payment_method, card_number, expiration_date, cvv, order_cost, order_time, order_status FROM orders ORDER BY order_time DESC";
 
 
-// Execute the query and store result into the result pointer
+// Store results into the result pointer
 $result = mysqli_query($conn, $query);
 
 // checks if the execution was successful

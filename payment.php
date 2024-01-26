@@ -241,14 +241,12 @@
                     <br>
             
                     <label for="cvv">CVV:</label>
-                    <input type="text" id="cvv" name="cvv" pattern="\d{3}" required>
+                    <input type="text" id="cvv" name="cvv" pattern="\d{3}" maxlength="3" required>
 
                     <br>
 
                     <input type="hidden" id="totalCost" name="totalCost" value="0.00">
-                    <!-- <fieldset>
-                        <p>Total amount: </p>
-                    </fieldset> -->
+
             
                 </fieldset>
                 
