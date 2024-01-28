@@ -1,14 +1,16 @@
+
+<body>
+<?php
+    include('header.inc');
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Nicolas Rivera">
-    <meta name="description" content="Apex Automation enquire form page">
-    <meta name="keywords" content="HTML5, enquireForm">
     <!-- CSS -->
     <link rel="stylesheet" href="styles/header.css">
-    <link rel="stylesheet" href="styles/enquire.css"> //using enquire's css page
     <!-- Fonts -->
     <link rel="stylesheet" href="https://use.typekit.net/hja7nrk.css">
     <!-- Icons -->
@@ -20,7 +22,6 @@
     <link rel="stylesheet" href="https://unpkg.com/simpledotcss/simple.min.css" /> <!--https://simplecss.org/ classless css -->
 </head>
 <body>
-        
     <h1>Signup</h1>
     <form action="process-signup.php" method="post" novalidate>
         <div>

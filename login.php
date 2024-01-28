@@ -1,3 +1,27 @@
+<?php
+if ($_SERVER["REQUEST_METHOD"] === "POST") { //when button is clicked
+    $mysqli = require __DIR__ ."/settings.php"; //connect to server
+    $sql = sprintf("SELECT * FROM user WHERE email = '%s'", $_POST["email"]);
+
+    $result = $mysqli -> query($sql);
+
+    $user = $result -> fetch_assoc();
+
+    if ($user) {
+
+        if (password_verify($_POST["password"], $user["password_hash"])) {
+
+            die("Login successful");
+        }
+
+    
+
+    }
+}
+
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,36 +38,28 @@
     <!-- Icons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>
-        Signup
+        Login
     </title>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://unpkg.com/simpledotcss/simple.min.css" /> <!--https://simplecss.org/ classless css -->
 </head>
 <body>
+        <?php
+            include('header.inc');
+        ?>
         
-    <h1>Signup</h1>
-    <form action="process-signup.php" method="post" novalidate>
-        <div>
-        <label for ="name">Name</label>
-        <input type="text" id="name">
-        </div>
+    <h1>Login</h1>
 
-        <div>
-            <label for="email" >email</label>
-            <input type="email" id="email" name="email">
-        </div>
+    <form method="post">
+        <label for = "email">email</label>
+        <input type = "email" name = "email" id = "email">
 
-        <div>
-            <label for="password">Password</label>
-            <input type="password" id="password" name="password">
-        </div>
+        <label for = "password">Password</label>
+        <input type = "password" name="password" id = "password">
 
-        <div>
-            <label for="password_confirmation"> Repeat password</label>
-            <input type="password" id="password_confirmation" name="password_confirmation">
-        </div>
+        <button>Log in</button>
 
-        <button>Sign up</button>
     </form>
+
 </body>
 </html>

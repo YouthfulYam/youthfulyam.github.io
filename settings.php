@@ -3,4 +3,4 @@
   $user=""; // Username
   $pwd=""; // Password
   $sql_db=""; // Database name
-?>
+
