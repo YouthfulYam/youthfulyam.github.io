@@ -16,8 +16,8 @@
                 <li><a href="enquire.php">Enquire</a></li>
                 <li><a href="about.php">About</a></li>
                 <li><a href="enhancements.php">Enhancements</a></li>
-                <li><a href="signup.php">Enhancements</a></li>
-                <li><a href="login.php">Enhancements</a></li>
+                <li><a href="signup.php">Sign Up</a></li>
+                <li><a href="login.php">Log in</a></li>
             </ul> 
         </nav>
     </header>
