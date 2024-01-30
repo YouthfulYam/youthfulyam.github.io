@@ -27,7 +27,7 @@ include('header.inc');
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Order Receipt</title>
-    <!-- Add your stylesheets or styles here -->
+    
 </head>
 
 <body>
@@ -51,7 +51,7 @@ include('header.inc');
         <p>No order details found.</p>
     <?php endif; ?>
 
-    <!-- Add your additional HTML content or scripts here -->
+    <!-- Add additional HTML content or scripts here -->
 
 </body>
 
