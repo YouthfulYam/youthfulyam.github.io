@@ -45,10 +45,7 @@
 
   <section class="form-section"  aria-label="Product Enquiry">
     <div class="form_wrapper">
-        <form method="post" action="enquire_order.php" id="enquiryForm" novalidate>
-        <!-- Old Submission form link
-            <form method="post" action="http://mercury.swin.edu.au/it000000/formtest.php" id ="enquiryForm">
-        -->
+    <form method="post" action="http://mercury.swin.edu.au/it000000/formtest.php" id ="enquiryForm">
             
             <fieldset>
                 <legend>Contact Information</legend>
