@@ -24,6 +24,8 @@ $createTableQuery = "CREATE TABLE IF NOT EXISTS orders (
     order_status ENUM('PENDING', 'FULFILLED', 'PAID', 'ARCHIVED') DEFAULT 'PENDING'
 )";
 
+
+
 // Execute the query to create the table
 $createTableResult = mysqli_query($conn, $createTableQuery);
 

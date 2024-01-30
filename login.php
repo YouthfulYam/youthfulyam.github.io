@@ -5,7 +5,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") { //when button is clicked
     $mysqli = require __DIR__ ."/settings.php"; //connect to server
 
     if ($_POST["email"] === "admin@admin.com") { //using adming@admin.com for default username
-        if(password_verify($_POST["admin"], $adminpassword)){
+        if ($_POST["password"] === "admin"){
             header("Location: manager.php");
             exit;
         }    
