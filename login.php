@@ -40,9 +40,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") { //when button is clicked
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Nicolas Rivera">
-    <meta name="description" content="Apex Automation enquire form page">
-    <meta name="keywords" content="HTML5, enquireForm">
+    <meta name="author" content="Brayden Hall">
+    <meta name="description" content="Apex Automation login page">
+    <meta name="keywords" content="HTML5, login">
     <!-- CSS -->
     <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/enquire.css"> //using enquire's css page
