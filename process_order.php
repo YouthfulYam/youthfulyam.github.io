@@ -1,7 +1,8 @@
 <?php
 
 //Check if accessing directly through html
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+if ($_SERVER["REQUEST_METHOD"] == "POST") 
+{
 
     require_once("settings.php");
 
