@@ -45,7 +45,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") { //when button is clicked
     <meta name="keywords" content="HTML5, login">
     <!-- CSS -->
     <link rel="stylesheet" href="styles/header.css">
-    <link rel="stylesheet" href="styles/enquire.css"> //using enquire's css page
+    <link rel="stylesheet" href="styles/enquire.css">
     <!-- Fonts -->
     <link rel="stylesheet" href="https://use.typekit.net/hja7nrk.css">
     <!-- Icons -->
