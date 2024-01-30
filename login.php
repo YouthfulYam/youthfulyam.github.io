@@ -1,6 +1,17 @@
 <?php
+$is_invalid = false;
+
 if ($_SERVER["REQUEST_METHOD"] === "POST") { //when button is clicked
     $mysqli = require __DIR__ ."/settings.php"; //connect to server
+
+    if ($_POST["email"] === "admin@admin.com") { //using adming@admin.com for default username
+        if(password_verify($_POST["admin"], $adminpassword)){
+            header("Location: manager.php");
+            exit;
+        }    
+    
+    }
+    else {
     $sql = sprintf("SELECT * FROM user WHERE email = '%s'", $_POST["email"]);
 
     $result = $mysqli -> query($sql);
@@ -13,10 +24,12 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") { //when button is clicked
 
             die("Login successful");
         }
+    }
 
     
 
     }
+    $is_invalid = true;
 }
 
 
@@ -49,6 +62,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") { //when button is clicked
         ?>
         
     <h1>Login</h1>
+
+        <?php if ($is_invalid): ?>
+            <em> Invalid Login</em>
+        <?php endif; ?>
 
     <form method="post">
         <label for = "email">email</label>
