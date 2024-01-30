@@ -16,11 +16,21 @@ unset($_SESSION['submitted_data']); // Clear the session data
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fix Order</title>
-    <!-- Add your stylesheets or styles here -->
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/enquire.css">
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://use.typekit.net/hja7nrk.css">
+    <!-- Icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
 
-<h1>Fix Order</h1>
+<?php
+    include('header.inc');
+?>
+
+<p>Order incorrect, please review and submit again.<p>
 
 <!-- Display errors if any -->
 <?php if (!empty($errors)) : ?>
@@ -38,8 +48,6 @@ unset($_SESSION['submitted_data']); // Clear the session data
     <label for="cardName">Customer Name:</label>
     <input type="text" id="cardName" name="cardName" value="<?= isset($submittedData['cardName']) ? $submittedData['cardName'] : ''; ?>" required>
     <br>
-
-    <!-- Add other form fields as needed -->
 
     <label for="cardType">Card Type:</label>
     <input type="text" id="cardType" name="cardType" value="<?= isset($submittedData['cardType']) ? $submittedData['cardType'] : ''; ?>" required>
@@ -59,8 +67,5 @@ unset($_SESSION['submitted_data']); // Clear the session data
 
     <input type="submit" value="Submit">
 </form>
-
-<!-- Add your additional HTML content or scripts here -->
-
 </body>
 </html>
