@@ -30,7 +30,7 @@ if (isset($_SESSION['order_id'])) {
         $order_status = $row['order_status'];
         $order_time = $row['order_time'];
 
-        // ... (other details you want to display)
+        
 
         // Display the receipt information
         echo "<h1>Order Receipt</h1>";
