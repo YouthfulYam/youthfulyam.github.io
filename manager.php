@@ -1,6 +1,14 @@
 <?php
 require_once("settings.php");
 include('header.inc');
+
+$referringPage = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : '';
+
+if (strpos($referringPage, 'login.php') === false) {
+    // Redirect to login.php if not accessed through login.php
+    header('Location: login.php');
+    exit();
+}
 ?>
 
 <!DOCTYPE html>
