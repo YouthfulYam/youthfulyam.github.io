@@ -1,58 +1,57 @@
 <?php
-// Include necessary settings file and start the session
-require_once("settings.php");
 session_start();
 
-// Check if the user is authenticated; otherwise, redirect to the appropriate page
-if (!isset($_SESSION['authenticated']) || !$_SESSION['authenticated']) {
-    header("Location: enquire_order.php");
-    exit();
-}
-
-// Retrieve the order details from the session
-$orderDetails = isset($_SESSION['order_details']) ? $_SESSION['order_details'] : null;
-
-// Clear the session data
-unset($_SESSION['order_details']);
-unset($_SESSION['authenticated']);
-
-// Include header and any additional styles or scripts
-include('header.inc');
-?>
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Order Receipt</title>
+// Check if the user accessed this page through a valid order
+if (isset($_SESSION['order_id'])) {
+    $order_id = $_SESSION['order_id'];
     
-</head>
+    // Fetch order details from the database based on the order_id
+    require_once("settings.php");
+    $conn = mysqli_connect($host, $user, $pwd, $sql_db);
 
-<body>
+    if (!$conn) {
+        die('Error: Unable to connect to the database. ' . mysqli_connect_error());
+    }
 
-    <h1>Order Receipt</h1>
+    // Fetch order details
+    $query = "SELECT * FROM orders WHERE order_id = $order_id";
+    $result = mysqli_query($conn, $query);
 
-    <!-- Display order details -->
-    <?php if ($orderDetails) : ?>
-        <p>Order ID: <?= $orderDetails['order_id']; ?></p>
-        <p>Customer Name: <?= $orderDetails['customer_name']; ?></p>
-        <p>Product Name: <?= $orderDetails['product_name']; ?></p>
-        <p>Product Quantity: <?= $orderDetails['product_quantity']; ?></p>
-        <p>Payment Method: <?= $orderDetails['payment_method']; ?></p>
-        <p>Card Number: <?= $orderDetails['card_number']; ?></p>
-        <p>Expiration Date: <?= $orderDetails['expiration_date']; ?></p>
-        <p>CVV: <?= $orderDetails['cvv']; ?></p>
-        <p>Order Cost: $<?= number_format($orderDetails['order_cost'], 2); ?></p>
-        <p>Order Time: <?= $orderDetails['order_time']; ?></p>
-        <p>Order Status: <?= $orderDetails['order_status']; ?></p>
-    <?php else : ?>
-        <p>No order details found.</p>
-    <?php endif; ?>
+    if ($result && $row = mysqli_fetch_assoc($result)) {
+        // Display order details in the receipt
+        $customer_name = $row['customer_name'];
+        $product_name = $row['product_name'];
+        $product_quantity = $row['product_quantity'];
+        $payment_method = $row['payment_method'];
+        $card_number = $row['card_number'];
+        $expiration_date = $row['expiration_date'];
+        $cvv = $row['cvv'];
+        $order_cost = $row['order_cost'];
+        $order_status = $row['order_status'];
+        $order_time = $row['order_time'];
 
-    <!-- Add additional HTML content or scripts here -->
+        // ... (other details you want to display)
 
-</body>
+        // Display the receipt information
+        echo "<h1>Order Receipt</h1>";
+        echo "<p>Order ID: $order_id</p>";
+        echo "<p>Customer Name: $customer_name</p>";
+        echo "<p>Product Name: $product_name</p>";
+        // ... (display other details)
 
-</html>
+        // Close the database connection
+        mysqli_close($conn);
+    } else {
+        // Error fetching order details
+        echo "<p>Error fetching order details.</p>";
+    }
+
+    // Clear the order_id from the session to prevent accessing the receipt again
+    unset($_SESSION['order_id']);
+
+} else {
+    // Invalid access, redirect to an error page
+    header("Location: error_page.php");
+    exit;
+}
+?>
