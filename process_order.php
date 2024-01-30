@@ -1,4 +1,12 @@
 <?php
+
+//Check if accessing directly through html
+if ($_SERVER["REQUEST_METHOD"] !== "POST" || !isset($_POST["submit"])) {
+    // Redirect to error page
+    header("Location: error_page.php");
+    exit;
+}
+
 require_once("settings.php");
 
 // Create a database connection
