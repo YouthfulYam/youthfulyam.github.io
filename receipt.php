@@ -37,7 +37,7 @@ if (isset($_SESSION['order_id'])) {
         echo "<p>Order ID: $order_id</p>";
         echo "<p>Customer Name: $customer_name</p>";
         echo "<p>Product Name: $product_name</p>";
-        // ... (display other details)
+        
 
         // Close the database connection
         mysqli_close($conn);
@@ -51,7 +51,7 @@ if (isset($_SESSION['order_id'])) {
 
 } else {
     // Invalid access, redirect to an error page
-    header("Location: error_page.php");
+    header("Location: process_order.php");
     exit;
 }
 ?>
