@@ -24,6 +24,16 @@ $createTableQuery = "CREATE TABLE IF NOT EXISTS orders (
     order_status ENUM('PENDING', 'FULFILLED', 'PAID', 'ARCHIVED') DEFAULT 'PENDING'
 )";
 
+$createTableQuery = "CREATE TABLE IF NOT EXISTS user (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name_ VARCHAR(128) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    password_hash VARCHAR(255) NOT NULL,
+    
+)";
+
+
+
 
 
 // Execute the query to create the table
@@ -39,3 +49,12 @@ if (!$createTableResult) {
 // Close the database connection
 mysqli_close($conn);
 ?>
+
+
+//Needs Database/Table
+//Database name "user"
+//Table with 4 columns
+//1st column "id" int, auto increment. (should make primary key automaticaly)
+//2nd column "name" varchar. 128 character.
+//3rd column "email" varchar. 255 character. (unique index) -- > (prevents multiple signups)
+//4th column "password_hash" varchar. 255 character.

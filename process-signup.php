@@ -11,10 +11,10 @@
 require __DIR__ ."settings.php"; //link to settings for sql signin
 $mysqli = new mysqli("$host","username","password","dbname");
 
-if (empty($_POST["name"])){
+if (empty($_POST["name_"])){
     die("Name is required. Please return to the previous screen and enter a valid name."); //validating name server side
 }
-if ( ! filter_var($_POST["emil"], FILTER_VALIDATE_EMAIL)){
+if ( ! filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)){
     die("Valid email is required. Please return to the previous screen and enter a valid email."); //validating email server side
 }
 
@@ -38,7 +38,7 @@ $password_hash = password_hash($_POST["password"], PASSWORD_DEFAULT); // convert
 
 require __DIR__  . "/testconnection.php"; //link to test connection
 
-$sql = "INSERT INTO user (name, email, password_hash)
+$sql = "INSERT INTO user (name_, email, password_hash)
         VALUES (?, ?, ?)"; // using the "user" database
 
 $stmt = $mysqli ->stmt_init();
@@ -47,7 +47,7 @@ if ( ! $stmt->prepare($sql)){
     die("SQL error: " . $mysqli->error); //check and display for SQL syntax errors
 }
 
-$stmt -> bind_param("sss", $_POST["name"], $_POST["email"], $password_hash) ;
+$stmt -> bind_param("sss", $_POST["name_"], $_POST["email"], $password_hash) ;
 
 if ($stmt -> execute()) {
     echo"Signup Successful";
